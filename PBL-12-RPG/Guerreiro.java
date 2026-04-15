@@ -50,7 +50,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║ _  . _  \\>                                                 ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {} // 200 milissegundos
+                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
                 Main.limparTela();
@@ -62,7 +62,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _    \\>                                               ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 3 ---
                 Main.limparTela();
@@ -74,7 +74,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _       \\>                                            ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 4 ---
                 Main.limparTela();
@@ -97,7 +97,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _          \\>                                         ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 6 ---
                 Main.limparTela();
@@ -109,7 +109,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _             \\>                                      ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 7 ---
                 Main.limparTela();
@@ -121,7 +121,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _                \\>                                   ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 8 ---
                 Main.limparTela();
@@ -133,7 +133,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _                   \\>                                ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 9 ---
                 Main.limparTela();
@@ -145,7 +145,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  _ . _                      \\>                             ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 10 ---
                 Main.limparTela();
@@ -156,7 +156,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║   -                        [####[]_________________________║");
                 System.out.println("║  _ . _                         \\>                          ║");
                 System.out.println("║ _ -                                                        ║");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 break;
             case 3: // Recuperar
