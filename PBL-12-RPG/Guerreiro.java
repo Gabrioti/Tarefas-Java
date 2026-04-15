@@ -156,10 +156,8 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║   -                        [####[]_________________________║");
                 System.out.println("║  _ . _                         \\>                          ║");
                 System.out.println("║ _ -                                                        ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(200); } catch (InterruptedException e) {}
 
-                
                 break;
             case 3: // Recuperar
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");

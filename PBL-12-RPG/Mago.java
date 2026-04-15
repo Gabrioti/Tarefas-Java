@@ -52,4 +52,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
         }
         System.out.println("╚════════════════════════════════════════════════════════════╝");
     }
+
+
+    
 }
