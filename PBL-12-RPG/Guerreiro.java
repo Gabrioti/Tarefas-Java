@@ -1,53 +1,173 @@
 public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
-
-    private int PontosDeVidaGanhos = 5; // Quantidade de vida que o guerreiro recupera
-    private int PontosDeEnergiaGanhos = 5; // Quantidade de energia que o guerreiro recupera
-
     public Guerreiro(String nome) {
-        super(nome, 100, 20, 15, 50); // Vida, Ataque, Defesa e Energia específicos para o Guerreiro
+        super(nome, 100, 50, 15, 10, 30, 0);
     }
 
     @Override
     public void atacar(PersonagemBase alvo) {
-        if (this.estaVivo()) {
-            System.out.println(getNome() + " ataca " + alvo.getNome());
-            alvo.receberDano(getAtaque());
-        } else {
-            System.out.println(getNome() + "não pode atacar.");
-        }
+        System.out.println(getNome() + " ataca com a espada!");
+        alvo.receberDano(getForca());
     }
 
     @Override
-    public void usarHabilidadeEspecial(PersonagemBase alvo) {
-        if (this.estaVivo() && getEnergia() >= 20) {
-            System.out.println(getNome() + " usa sua habilidade especial: Golpe Devastador!");
-
-            alvo.receberDano(getAtaque() * 2); // Causa dano dobrado
-
-            int novaEnergia = getEnergia() - 20; // Reduz a energia do guerreiro
-
-            setEnergia(getEnergia() - 20); //método para atualizar a energia do guerreiro
-
+    public void usarHabilidade(PersonagemBase alvo) {
+        if (getStamina() >= 15) {
+            System.out.println(getNome() + " usa INVESTIDA BRUTAL!");
+            alvo.receberDano(getForca() * 2);
+            setStamina(getStamina() - 15);
         } else {
-            System.out.println(getNome() + " não tem energia suficiente para usar a habilidade especial.");
+            System.out.println("Stamina insuficiente!");
         }
     }
 
     @Override
     public void recuperar() {
-        if (this.estaVivo()) {
-            System.out.println(getNome() + " se recupera, restaurando parte de sua vida e energia.");
-
-            setVida(getVida() + PontosDeVidaGanhos);// Lógica para recuperar vida
-            setEnergia(getEnergia() + PontosDeEnergiaGanhos);// Lógica para recuperar energia
-
-            if (getVida() > 100) {
-                setVida(100);
-            }
-            
-            if (getEnergia() > 50) {
-                setEnergia(50);  
-            }  
-        }        
+        System.out.println(getNome() + " levanta o escudo e respira fundo!");
+        setVida(getVida() + 15);
+        restaurarDefesaTotal();
     }
-}
+
+    @Override
+    public void desenharAcao(int acaoEscolhida) {
+        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        switch (acaoEscolhida) {
+            case 1: // Ataque
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║  - _    -                                                  ║");
+                System.out.println("║ _  -  .  />_______________________________                 ║");
+                System.out.println("║   - [####[]______________________________/                 ║");
+                System.out.println("║ _  . _  \\>                                                 ║");
+                System.out.println("║ _ -                                                        ║");
+                break;
+            case 2: // Habilidade Especial
+                // --- FRAME 1 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  - _    -                                                  ║");
+                System.out.println("║ _  -  .  />_______________________________                 ║");
+                System.out.println("║   - [####[]______________________________/                 ║");
+                System.out.println("║ _  . _  \\>                                                 ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {} // 200 milissegundos
+
+                // --- FRAME 2 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .    />_______________________________               ║");
+                System.out.println("║   -   [####[]______________________________/               ║");
+                System.out.println("║  _ . _    \\>                                               ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 3 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .       />_______________________________            ║");
+                System.out.println("║   -      [####[]______________________________/            ║");
+                System.out.println("║  _ . _       \\>                                            ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 4 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .        />_______________________________           ║");
+                System.out.println("║   -       [####[]______________________________/           ║");
+                System.out.println("║  _ . _        \\>                                           ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+
+                // --- FRAME 5 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .          />_______________________________         ║");
+                System.out.println("║   -         [####[]______________________________/         ║");
+                System.out.println("║  _ . _          \\>                                         ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 6 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .             />_______________________________      ║");
+                System.out.println("║   -            [####[]______________________________/      ║");
+                System.out.println("║  _ . _             \\>                                      ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 7 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .                />_______________________________   ║");
+                System.out.println("║   -               [####[]______________________________/   ║");
+                System.out.println("║  _ . _                \\>                                   ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 8 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .                   />_______________________________║");
+                System.out.println("║   -                  [####[]______________________________/║");
+                System.out.println("║  _ . _                   \\>                                ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 9 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .                      />____________________________║");
+                System.out.println("║   -                     [####[]____________________________║");
+                System.out.println("║  _ . _                      \\>                             ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 10 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
+                System.out.println("║  . _    -                                                  ║");
+                System.out.println("║ _  -  .                         />_________________________║");
+                System.out.println("║   -                        [####[]_________________________║");
+                System.out.println("║  _ . _                         \\>                          ║");
+                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                
+                break;
+            case 3: // Recuperar
+                System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
+                System.out.println("║                                                            ║");
+                System.out.println("║             [ COLOQUE A ARTE DE CURA AQUI ]                ║");
+                System.out.println("║                                                            ║");
+                break;
+        }
+        System.out.println("╚════════════════════════════════════════════════════════════╝");
+    }
+}                                  
