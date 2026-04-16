@@ -1,8 +1,11 @@
 public abstract class PersonagemBase {
+
+    private int ouro = 0; // Começa com zero ou um valor inicial
     private String nome;
     private int vidaMaxima;
     private int vida;
     private int defesaMaxima;
+    private int staminaMaxima;
     private int defesa; // Funciona como barra de escudo
     private int forca;
     private int mana;
@@ -17,6 +20,8 @@ public abstract class PersonagemBase {
         this.vida = vida;
         this.defesaMaxima = defesa;
         this.defesa = defesa;
+        this.staminaMaxima = stamina;
+        this.stamina = stamina;
         this.forca = forca;
         this.mana = mana;
         this.stamina = stamina;
@@ -26,6 +31,8 @@ public abstract class PersonagemBase {
     }
 
     // Getters e Setters principais
+    public int getOuro() { return ouro; }
+    public void setOuro(int ouro) { this.ouro = ouro; }
     public String getNome() { return nome; }
     public int getVida() { return vida; }
     public void setVida(int vida) { this.vida = vida; }
@@ -41,6 +48,11 @@ public abstract class PersonagemBase {
     public void setUlt(int ult) { this.ult = ult; }
     public int getNivel() { return nivel; }
     public int getExperiencia() {  return experiencia; }
+
+    public void adicionarOuro(int quantidade) {
+    this.ouro += quantidade;
+    System.out.println("Você recebeu " + quantidade + " moedas de ouro!");
+}
     
     public void ganharExperiencia(int xp) {
         this.experiencia += xp;
@@ -73,6 +85,10 @@ public abstract class PersonagemBase {
     }
     public void restaurarDefesaTotal() {
         this.defesa = this.defesaMaxima;
+    }
+
+    public void restaurarStaminaTotal() {
+        this.stamina = this.staminaMaxima;
     }
     public boolean estaVivo() {
         return this.vida > 0;

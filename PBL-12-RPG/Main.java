@@ -37,7 +37,7 @@ public class Main {
         ArrayList<Inimigo> filaInimigos = new ArrayList<>();
 
         // ---> CHAMA A CALIBRAÇÃO AQUI <---
-        telaDeCalibracao(scanner);
+        //telaDeCalibracao(scanner);
 
         // Configurando a fila de Inimigos (Fase 1, Fase 2 e Boss)
         filaInimigos.add(new Inimigo("Goblin Saqueador", 40, 10, 8, 0, 10, false));
@@ -135,90 +135,12 @@ public class Main {
         for (int i = 0; i < filaInimigos.size(); i++) {
             Inimigo inimigo = filaInimigos.get(i);
             
-            limparTela();
-            System.out.println("============================================================");
-            System.out.println(" UM " + inimigo.getNome().toUpperCase() + " APARECEU!");
-            System.out.println("============================================================");
-            System.out.println("Pressione ENTER para iniciar o combate...");
-            scanner.nextLine();
+            // ---> A MÁGICA DA REFATORAÇÃO ESTÁ AQUI <---
+            // Chama o novo arquivo de combate. O código inteiro de luta está escondido lá agora!
+            boolean heroiSobreviveu = Combate.iniciar(heroi, inimigo, scanner);
 
-            // 4. LOOP DE BATALHA (TURNOS)
-            while (heroi.estaVivo() && inimigo.estaVivo()) {
-                limparTela();
-                Art.desenharCena(heroi, inimigo);
-                
-                boolean acaoValida = false;
-                int acao = 0;
-
-                // Captura a ação do jogador
-                while (!acaoValida) {
-                    try {
-                        System.out.println("\nO que você fará?");
-                        System.out.println("1 - Atacar");
-                        System.out.println("2 - Habilidade Especial");
-                        System.out.println("3 - Recuperar");
-                        System.out.print("Sua escolha: ");
-                        acao = Integer.parseInt(scanner.nextLine());
-
-                        if (acao >= 1 && acao <= 3) {
-                            acaoValida = true;
-                        } else {
-                            System.out.println("Ação inválida. Escolha 1, 2 ou 3.");
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Erro: Digite um número válido.");
-                    }
-                }
-
-                limparTela();
-                System.out.println("============================================================");
-                System.out.println("                       TURNO ATUAL                          ");
-                System.out.println("============================================================");
-
-                heroi.desenharAcao(acao);
-
-                // Executa a ação do jogador
-                switch (acao) {
-                    case 1:
-                        heroi.atacar(inimigo);
-                        break;
-                    case 2:
-                        if (heroi instanceof HabilidadeEspecial) {
-                            ((HabilidadeEspecial) heroi).usarHabilidade(inimigo);
-                        }
-                        break;
-                    case 3:
-                        if (heroi instanceof Recuperavel) {
-                            ((Recuperavel) heroi).recuperar();
-                        }
-                        break;
-                }
-
-                System.out.println("------------------------------------------------------------");
-
-                // Turno do inimigo (se ele sobreviveu ao ataque do jogador)
-                if (inimigo.estaVivo()) {
-                    System.out.println("Turno do Inimigo:");
-                    inimigo.tomarDecisao(heroi);
-                    System.out.println("============================================================");
-                    
-                    // Pausa automática de 3 segundos para dar tempo de ler o que o inimigo fez
-                    try {
-                        Thread.sleep(3000); 
-                    } catch (InterruptedException e) {}
-
-                } else {
-                    System.out.println(inimigo.getNome() + " caiu!");
-                    System.out.println("============================================================");
-                    
-                    // A pausa manual com ENTER acontece APENAS quando o inimigo é derrotado
-                    System.out.println("Pressione ENTER para comemorar a vitória...");
-                    scanner.nextLine(); 
-                }
-            }
-
-            // 5. RESULTADO DA BATALHA
-            if (!heroi.estaVivo()) {
+            // 4. RESULTADO DA BATALHA E FOGUEIRA
+            if (!heroiSobreviveu) {
                 limparTela();
                 System.out.println("============================================================");
                 System.out.println("                        GAME OVER                           ");
@@ -229,12 +151,14 @@ public class Main {
             } else {
                 // Herói venceu
                 heroi.ganharExperiencia(50);
+                heroi.adicionarOuro(60); // <--- dá ouro ao vencer
                 heroi.restaurarDefesaTotal();
+                heroi.restaurarStaminaTotal();
                 
                 Item drop = new Item("Relíquia da Batalha " + (i + 1), 3, 2);
                 inventario.add(drop);
                 
-                // 6. MENU DE INTERVALO (FOGUEIRA)
+                // MENU DE INTERVALO (FOGUEIRA)
                 boolean noIntervalo = true;
                 while (noIntervalo) {
                     limparTela();
@@ -245,12 +169,16 @@ public class Main {
                     System.out.println("\nO que deseja fazer?");
                     System.out.println("1 - Avançar para o próximo desafio");
                     System.out.println("2 - Ver Status e Inventário");
+                    System.out.println("3 - Visitar a Loja");
                     System.out.print("Opção: ");
                     
                     try {
                         int escolhaMenu = Integer.parseInt(scanner.nextLine());
                         if (escolhaMenu == 1) {
-                            noIntervalo = false; // Sai do loop e vai para a próxima luta
+                            System.out.println("\nPrepare-se...");
+                            System.out.println("Pressione ENTER para chamar o próximo inimigo!");
+                            scanner.nextLine(); 
+                            noIntervalo = false; // Sai da fogueira e vai para a próxima luta
                         } else if (escolhaMenu == 2) {
                             limparTela();
                             System.out.println("============================================================");
@@ -268,7 +196,9 @@ public class Main {
                             System.out.println("============================================================");
                             System.out.println("Pressione ENTER para voltar ao menu...");
                             scanner.nextLine();
-                        } else {
+                        } else if (escolhaMenu == 3) {
+                            Loja.menuLoja(heroi, inventario, scanner);
+                        } else{
                             System.out.println("Opção inválida.");
                         }
                     } catch (NumberFormatException e) {
