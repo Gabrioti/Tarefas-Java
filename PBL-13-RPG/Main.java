@@ -9,35 +9,14 @@ public class Main {
         // \033[2J -> Limpa a tela visível
         // \033[3J -> Limpa o histórico de rolagem (scrollback)
         System.out.print("\033[H\033[2J\033[3J");
-        System.out.flush();
+        System.out.flush();// Garante que a limpeza seja aplicada imediatamente
     }
-
-    // Método para calibrar o tamanho da tela do jogador
-    /*public static void telaDeCalibracao(Scanner scanner) {
-        limparTela();
-        System.out.println("╔════════════════════════════════════════════════════════════╗");
-        System.out.println("║                                                            ║");
-        System.out.println("║                    TELA DE CALIBRAÇÃO                      ║");
-        System.out.println("║                                                            ║");
-        System.out.println("║   Para a melhor experiência e para que as artes não        ║");
-        System.out.println("║   fiquem quebradas, por favor, redimensione a janela do    ║");
-        System.out.println("║   seu terminal até que você consiga ver esta caixa         ║");
-        System.out.println("║   inteira perfeitamente alinhada.                          ║");
-        System.out.println("║                                                            ║");
-        System.out.println("║   Quando a caixa estiver perfeita, aperte ENTER.           ║");
-        System.out.println("║                                                            ║");
-        System.out.println("╚════════════════════════════════════════════════════════════╝");
-        scanner.nextLine(); // Trava o jogo aqui até o usuário apertar Enter
-    }*/
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PersonagemBase heroi = null;
-        ArrayList<Item> inventario = new ArrayList<>();
-        ArrayList<Inimigo> filaInimigos = new ArrayList<>();
-
-        // ---> CHAMA A CALIBRAÇÃO AQUI <---
-        //telaDeCalibracao(scanner);
+        ArrayList<Item> inventario = new ArrayList<>(); // Inventário do herói para armazenar itens coletados e comprados
+        ArrayList<Inimigo> filaInimigos = new ArrayList<>(); // Fila de inimigos para o jogo, cada um com suas características e dificuldade
 
         // Configurando a fila de Inimigos (Fase 1, Fase 2 e Boss)
         filaInimigos.add(new Inimigo("Goblin Saqueador", 40, 10, 8, 0, 10, false));
@@ -51,7 +30,14 @@ public class Main {
         
         System.out.print("Digite o nome do seu Herói: ");
         String nome = scanner.nextLine();
-
+        if (nome.trim().isEmpty()) {
+            nome = "Herói Anônimo"; // Nome padrão caso o jogador não digite nada
+        }
+        if (nome.length() > 10) {
+            nome = "Jonas, o idiota"; // Nome padrão caso o jogador digite um nome muito longo
+            System.out.println("Nome muito longo! Seu herói será chamado de Jonas, o idiota.");
+        }
+        
         // 1. ESCOLHA DE CLASSE
         boolean classeValida = false;
         while (!classeValida) {
@@ -114,6 +100,8 @@ public class Main {
 
                 if (pontos == 0) break;
 
+                limparTela();
+                System.out.println("\nPontos restantes: " + pontos);
                 System.out.print("Adicionar em Defesa (Atual: " + heroi.getDefesa() + "): ");
                 int addD = Integer.parseInt(scanner.nextLine());
                 if (addD > 0 && addD <= pontos) { 
@@ -122,7 +110,10 @@ public class Main {
                 }
                 
                 if (pontos > 0) {
+                    limparTela();
+                    System.out.println("\nPontos restantes: " + pontos);
                     System.out.println("Os " + pontos + " pontos restantes foram adicionados em Vida automaticamente.");
+                    try { Thread.sleep(2000); } catch (InterruptedException e) {}
                     heroi.setVida(heroi.getVida() + (pontos * 2)); // 1 ponto = 2 de vida extra
                     pontos = 0;
                 }
@@ -135,8 +126,7 @@ public class Main {
         for (int i = 0; i < filaInimigos.size(); i++) {
             Inimigo inimigo = filaInimigos.get(i);
             
-            // ---> A MÁGICA DA REFATORAÇÃO ESTÁ AQUI <---
-            // Chama o novo arquivo de combate. O código inteiro de luta está escondido lá agora!
+            // Chama o novo arquivo de combate. O código inteiro de luta está lá agora!
             boolean heroiSobreviveu = Combate.iniciar(heroi, inimigo, scanner);
 
             // 4. RESULTADO DA BATALHA E FOGUEIRA
@@ -180,22 +170,44 @@ public class Main {
                             scanner.nextLine(); 
                             noIntervalo = false; // Sai da fogueira e vai para a próxima luta
                         } else if (escolhaMenu == 2) {
-                            limparTela();
-                            System.out.println("============================================================");
-                            System.out.println("                       SEUS STATUS                          ");
-                            System.out.println("============================================================");
-                            System.out.println("Nível: " + heroi.getNivel() + " | Experiência: " + heroi.getExperiencia() + "/100");
-                            System.out.println("Vida Atual: " + heroi.getVida() + " | Escudo: " + heroi.getDefesa());
-                            System.out.println("Força Total: " + heroi.getForca() + " | Mana/Stamina: " + heroi.getMana() + "/" + heroi.getStamina());
-                            
-                            System.out.println("\n----------------------- INVENTÁRIO -----------------------");
+                            // Dentro do if (escolhaMenu == 2) no Main.java
+                        limparTela();
+                        System.out.println("╔════════════════════════════════════════════════════════════╗");
+                        System.out.println("║                       PERFIL DO HERÓI                      ║");
+                        System.out.println("╠════════════════════════════════════════════════════════════╣");
+
+                        // Linhas de Status Principal
+                        System.out.printf("║ Nome: %-25s | Nível: %-18d ║\n", heroi.getNome(), heroi.getNivel());
+                        System.out.printf("║ XP: %d/100 %-48s ║\n", heroi.getExperiencia(), ""); 
+                        System.out.printf("║ Ouro: %-52s ║\n", heroi.getOuro() + " moedas");
+                        System.out.println("║------------------------------------------------------------║");
+
+                        // Linhas de Atributos
+                        System.out.printf("║ Vida: %-15d | Escudo: %-25d ║\n", heroi.getVida(), heroi.getDefesa());
+
+                        String tipoEnergia = (heroi instanceof Mago) ? "Mana" : "Stamina";
+                        int valorEnergia = (heroi instanceof Mago) ? heroi.getMana() : heroi.getStamina();
+                        System.out.printf("║ %-15s: %-15d | Força: %-26d ║\n", tipoEnergia, valorEnergia, heroi.getForca());
+
+                        System.out.println("╠════════════════════════════════════════════════════════════╣");
+                        System.out.println("║                         INVENTÁRIO                         ║");
+                        System.out.println("║------------------------------------------------------------║");
+
+                        if (inventario.isEmpty()) {
+                            System.out.println("║ (O inventário está vazio)                                  ║");
+                        } else {
                             for (int j = 0; j < inventario.size(); j++) {
                                 Item itemAtual = inventario.get(j);
-                                System.out.println((j + 1) + ". " + itemAtual.getNome() + " (+Força: " + itemAtual.getBonusForca() + ", +Def: " + itemAtual.getBonusDefesa() + ")");
+                                String linhaItem = String.format("%d. %-20s (+Atq:%d, +Def:%d)", 
+                                                    (j + 1), itemAtual.getNome(), itemAtual.getBonusForca(), itemAtual.getBonusDefesa());
+                                System.out.printf("║ %-58s ║\n", linhaItem);
                             }
-                            System.out.println("============================================================");
-                            System.out.println("Pressione ENTER para voltar ao menu...");
-                            scanner.nextLine();
+                        }
+
+                        System.out.println("╚════════════════════════════════════════════════════════════╝");
+                        System.out.println("Pressione ENTER para voltar ao menu...");
+                        scanner.nextLine();
+
                         } else if (escolhaMenu == 3) {
                             Loja.menuLoja(heroi, inventario, scanner);
                         } else{

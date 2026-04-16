@@ -19,17 +19,25 @@ public class Loja {
             System.out.println("╔════════════════════════════════════════════════════════════╗");
             System.out.println("║                    LOJA DE EQUIPAMENTOS                    ║");
             System.out.println("╠════════════════════════════════════════════════════════════╣");
-            System.out.println("  Seu Ouro: " + heroi.getOuro());
-            System.out.println("--------------------------------------------------------------");
+            
+            // Imprime o ouro com a parede esquerda e direita fixas
+            System.out.printf("║ Seu Ouro: %-48d ║\n", heroi.getOuro());
+            System.out.println("║------------------------------------------------------------║");
             
             for (int i = 0; i < catalogo.size(); i++) {
                 Item item = catalogo.get(i);
-                System.out.printf("  %d. %-20s | Força: +%-2d | Defesa: +%-2d | Preço: %d\n", 
+                
+                // Montamos a frase do item calculando os espaços para não passar de 58 caracteres
+                String linhaItem = String.format("%d. %-21s | Atq:+%-2d | Def:+%-2d | $%3d", 
                                   (i + 1), item.getNome(), item.getBonusForca(), 
                                   item.getBonusDefesa(), precos[i]);
+                
+                // Imprimimos a linha já com as paredes
+                System.out.printf("║ %-58s ║\n", linhaItem);
             }
             
-            System.out.println("  0. Sair da Loja");
+            System.out.printf("║ %-58s ║\n", ""); // Linha em branco para dar um respiro
+            System.out.printf("║ %-58s ║\n", "0. Sair da Loja");
             System.out.println("╚════════════════════════════════════════════════════════════╝");
             System.out.print("O que deseja comprar? ");
 

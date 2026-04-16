@@ -31,7 +31,7 @@ public class Art {
             "║                                                /     \\     ║\n"+
             "║                                               (       )    ║\n"+
             "║                                              /|       |\\   ║\n"+
-            "║                                             / |   _   |  \\ ║\n"+
+            "║                                             / |   _   | \\  ║\n"+
             "║                                               |__| |__|    ║";
 
 
@@ -44,11 +44,21 @@ public class Art {
         // Imprime os personagens lado a lado de forma simplificada
         System.out.println(arteHeroi + arteInimigo);
         
-        // Imprime os status dentro da moldura
+        // No final do método desenharCena em Art.java
         System.out.println("╠════════════════════════════════════════════════════════════╣");
         System.out.printf("║ %-25s VS %-28s  ║\n", heroi.getNome(), inimigo.getNome()); 
-        System.out.printf("║ Vida: %-3d | Escudo: %-3d      Vida: %-3d | Escudo: %-3d       ║\n", 
-                          heroi.getVida(), heroi.getDefesa(), inimigo.getVida(), inimigo.getDefesa());
+        System.out.printf("║ Vida: %-18d | Vida: %-25d ║\n", heroi.getVida(), inimigo.getVida());
+        System.out.printf("║ Escudo: %-16d | Escudo: %-23d ║\n", heroi.getDefesa(), inimigo.getDefesa());
+
+        // Lógica inteligente para Mana/Stamina
+        String labelH = (heroi instanceof Mago) ? "Mana" : "Stam";
+        String labelI = (inimigo.getMana() > 0) ? "Mana" : "Stam";
+        int valH = (heroi instanceof Mago) ? heroi.getMana() : heroi.getStamina();
+        int valI = (inimigo.getMana() > 0) ? inimigo.getMana() : inimigo.getStamina();
+
+        System.out.printf("║ %-4s: %-18d | %-4s: %-25d ║\n", labelH, valH, labelI, valI);
+        System.out.println("║------------------------------------------------------------║");
+        System.out.printf("║ Seu Ouro: %-48d ║\n", heroi.getOuro());
         System.out.println("╚════════════════════════════════════════════════════════════╝");
     }
 }

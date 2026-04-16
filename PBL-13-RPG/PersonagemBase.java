@@ -50,9 +50,9 @@ public abstract class PersonagemBase {
     public int getExperiencia() {  return experiencia; }
 
     public void adicionarOuro(int quantidade) {
-    this.ouro += quantidade;
-    System.out.println("Você recebeu " + quantidade + " moedas de ouro!");
-}
+        this.ouro += quantidade;
+        System.out.println("Você recebeu " + quantidade + " moedas de ouro!");
+    }
     
     public void ganharExperiencia(int xp) {
         this.experiencia += xp;
