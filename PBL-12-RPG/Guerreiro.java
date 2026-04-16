@@ -32,12 +32,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
             case 1: // Ataque
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║  - _    -                                                  ║");
-                System.out.println("║ _  -  .  />_______________________________                 ║");
-                System.out.println("║   - [####[]______________________________/                 ║");
-                System.out.println("║ _  . _  \\>                                                 ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+
                 break;
             case 2: // Habilidade Especial
                 // --- FRAME 1 ---
@@ -47,7 +46,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║  - _    -                                                  ║");
                 System.out.println("║ _  -  .  />_______________________________                 ║");
                 System.out.println("║   - [####[]______________________________/                 ║");
-                System.out.println("║ _  . _  \\>                                                 ║");
+                System.out.println("║ _  . _   \\>                                                ║");
                 System.out.println("║ _ -                                                        ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
@@ -56,11 +55,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .    />_______________________________               ║");
-                System.out.println("║   -   [####[]______________________________/               ║");
-                System.out.println("║  _ . _    \\>                                               ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║    -    .                                                  ║");
+                System.out.println("║  _   .     />_______________________________               ║");
+                System.out.println("║    -  [####[]______________________________/               ║");
+                System.out.println("║-   .  _    \\>                                              ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -68,11 +67,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .       />_______________________________            ║");
-                System.out.println("║   -      [####[]______________________________/            ║");
-                System.out.println("║  _ . _       \\>                                            ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║        -                                                   ║");
+                System.out.println("║   - _    .    />_______________________________            ║");
+                System.out.println("║   .  -   [####[]______________________________/            ║");
+                System.out.println("║   _   _       \\>                                           ║");
+                System.out.println("║     -    .                                                 ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -80,22 +79,22 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .        />_______________________________           ║");
-                System.out.println("║   -       [####[]______________________________/           ║");
-                System.out.println("║  _ . _        \\>                                           ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║       _    ,                                               ║");
+                System.out.println("║   _            />_______________________________           ║");
+                System.out.println("║     _  -  [####[]______________________________/           ║");
+                System.out.println("║          _     \\>                                          ║");
+                System.out.println("║             .                                              ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
 
                 // --- FRAME 5 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .          />_______________________________         ║");
-                System.out.println("║   -         [####[]______________________________/         ║");
-                System.out.println("║  _ . _          \\>                                         ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║               _                                            ║");
+                System.out.println("║      .     -     />_______________________________         ║");
+                System.out.println("║         -   [####[]______________________________/         ║");
+                System.out.println("║    .      _      \\>                                        ║");
+                System.out.println("║                .                                           ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -103,11 +102,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .             />_______________________________      ║");
-                System.out.println("║   -            [####[]______________________________/      ║");
-                System.out.println("║  _ . _             \\>                                      ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                 _                                          ║");
+                System.out.println("║          _    -     />_______________________________      ║");
+                System.out.println("║      ,      -  [####[]______________________________/      ║");
+                System.out.println("║          -    .     \\>                                     ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -115,11 +114,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .                />_______________________________   ║");
-                System.out.println("║   -               [####[]______________________________/   ║");
-                System.out.println("║  _ . _                \\>                                   ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                      _                                     ║");
+                System.out.println("║            .     _  .  />_______________________________   ║");
+                System.out.println("║         ,     -   [####[]______________________________/   ║");
+                System.out.println("║           -     _      \\>                                  ║");
+                System.out.println("║                       .                                    ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -127,11 +126,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .                   />_______________________________║");
-                System.out.println("║   -                  [####[]______________________________/║");
-                System.out.println("║  _ . _                   \\>                                ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                       _                              .     ║");
+                System.out.println("║                .   _     />_____________________________°__║");
+                System.out.println("║         ,       -    [####[]______________________________/║");
+                System.out.println("║              .    _      \\>                       °    .   ║");
+                System.out.println("║                       -                                   °║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -139,11 +138,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .                      />____________________________║");
-                System.out.println("║   -                     [####[]____________________________║");
-                System.out.println("║  _ . _                      \\>                             ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                            .                             °.║");
+                System.out.println("║                   ,     _   />_______________________°_____║");
+                System.out.println("║                      -  [####[]____________________________║");
+                System.out.println("║                .         _  \\>                   .       . ║");
+                System.out.println("║                            .                             ° ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
@@ -151,21 +150,21 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  . _    -                                                  ║");
-                System.out.println("║ _  -  .                         />_________________________║");
-                System.out.println("║   -                        [####[]_________________________║");
-                System.out.println("║  _ . _                         \\>                          ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                 />________________________(║");
+                System.out.println("║                            [####[]_________________________║");
+                System.out.println("║                                 \\>                        (║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 break;
             case 3: // Recuperar
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
-                System.out.println("║                                                            ║");
-                System.out.println("║             [ COLOQUE A ARTE DE CURA AQUI ]                ║");
-                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
                 break;
         }
-        System.out.println("╚════════════════════════════════════════════════════════════╝");
     }
 }                                  

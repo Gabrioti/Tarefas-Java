@@ -5,15 +5,39 @@ public class Main {
 
     // Método para limpar o console usando códigos ANSI
     public static void limparTela() {
-        System.out.print("\033[H\033[2J");
+        // \033[H  -> Move o cursor para o topo
+        // \033[2J -> Limpa a tela visível
+        // \033[3J -> Limpa o histórico de rolagem (scrollback)
+        System.out.print("\033[H\033[2J\033[3J");
         System.out.flush();
     }
+
+    // Método para calibrar o tamanho da tela do jogador
+    /*public static void telaDeCalibracao(Scanner scanner) {
+        limparTela();
+        System.out.println("╔════════════════════════════════════════════════════════════╗");
+        System.out.println("║                                                            ║");
+        System.out.println("║                    TELA DE CALIBRAÇÃO                      ║");
+        System.out.println("║                                                            ║");
+        System.out.println("║   Para a melhor experiência e para que as artes não        ║");
+        System.out.println("║   fiquem quebradas, por favor, redimensione a janela do    ║");
+        System.out.println("║   seu terminal até que você consiga ver esta caixa         ║");
+        System.out.println("║   inteira perfeitamente alinhada.                          ║");
+        System.out.println("║                                                            ║");
+        System.out.println("║   Quando a caixa estiver perfeita, aperte ENTER.           ║");
+        System.out.println("║                                                            ║");
+        System.out.println("╚════════════════════════════════════════════════════════════╝");
+        scanner.nextLine(); // Trava o jogo aqui até o usuário apertar Enter
+    }*/
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PersonagemBase heroi = null;
         ArrayList<Item> inventario = new ArrayList<>();
         ArrayList<Inimigo> filaInimigos = new ArrayList<>();
+
+        // ---> CHAMA A CALIBRAÇÃO AQUI <---
+        telaDeCalibracao(scanner);
 
         // Configurando a fila de Inimigos (Fase 1, Fase 2 e Boss)
         filaInimigos.add(new Inimigo("Goblin Saqueador", 40, 10, 8, 0, 10, false));

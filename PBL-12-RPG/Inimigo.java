@@ -47,24 +47,26 @@ public class Inimigo extends PersonagemBase implements HabilidadeEspecial, Recup
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
             case 1: // Ataque
-                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║                                                            ║");
-                System.out.println("║           [ COLOQUE A ARTE DE ESPADA AQUI ]                ║");
-                System.out.println("║                                                            ║");
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com as GARRAS!");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
                 break;
             case 2: // Habilidade Especial
-                System.out.printf("║ %-58s ║\n", getNome() + " usa INVESTIDA BRUTAL!");
-                System.out.println("║                                                            ║");
-                System.out.println("║         [ COLOQUE A ARTE DE HABILIDADE AQUI ]              ║");
-                System.out.println("║                                                            ║");
+            // --- FRAME 1 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " usa ATAQUE FORTE!");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
                 break;
             case 3: // Recuperar
-                System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
-                System.out.println("║                                                            ║");
-                System.out.println("║             [ COLOQUE A ARTE DE CURA AQUI ]                ║");
-                System.out.println("║                                                            ║");
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " O inimigo se RECUPERA!");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
                 break;
         }
-        System.out.println("╚════════════════════════════════════════════════════════════╝");
     }
 }
