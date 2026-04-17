@@ -34,7 +34,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
             case 1: // Ataque
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " ataca com seu CAJADO!");
+                System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 break;
             case 2: // Habilidade Especial

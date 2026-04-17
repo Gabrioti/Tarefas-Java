@@ -30,12 +30,11 @@ public class Main {
         
         System.out.print("Digite o nome do seu Herói: ");
         String nome = scanner.nextLine();
-        if (nome.trim().isEmpty()) {
-            nome = "Herói Anônimo"; // Nome padrão caso o jogador não digite nada
-        }
-        if (nome.length() > 10) {
-            nome = "Jonas, o idiota"; // Nome padrão caso o jogador digite um nome muito longo
-            System.out.println("Nome muito longo! Seu herói será chamado de Jonas, o idiota.");
+        
+        while(nome.length() < 3 || nome.length() > 20) {
+            System.out.println("O nome deve ter entre 3 e 20 caracteres. Tente novamente.");
+            System.out.print("Digite o nome do seu Herói: ");
+            nome = scanner.nextLine();
         }
         
         // 1. ESCOLHA DE CLASSE
@@ -177,17 +176,17 @@ public class Main {
                         System.out.println("╠════════════════════════════════════════════════════════════╣");
 
                         // Linhas de Status Principal
-                        System.out.printf("║ Nome: %-25s | Nível: %-18d ║\n", heroi.getNome(), heroi.getNivel());
-                        System.out.printf("║ XP: %d/100 %-48s ║\n", heroi.getExperiencia(), ""); 
+                        System.out.printf("║ Nome: %-25s | Nível: %-17d ║\n", heroi.getNome(), heroi.getNivel());
+                        System.out.printf("║ XP: %d/100 %-47s ║\n", heroi.getExperiencia(), ""); 
                         System.out.printf("║ Ouro: %-52s ║\n", heroi.getOuro() + " moedas");
                         System.out.println("║------------------------------------------------------------║");
 
                         // Linhas de Atributos
-                        System.out.printf("║ Vida: %-15d | Escudo: %-25d ║\n", heroi.getVida(), heroi.getDefesa());
+                        System.out.printf("║ Vida: %-15d | Escudo: %-26d ║\n", heroi.getVida(), heroi.getDefesa());
 
                         String tipoEnergia = (heroi instanceof Mago) ? "Mana" : "Stamina";
                         int valorEnergia = (heroi instanceof Mago) ? heroi.getMana() : heroi.getStamina();
-                        System.out.printf("║ %-15s: %-15d | Força: %-26d ║\n", tipoEnergia, valorEnergia, heroi.getForca());
+                        System.out.printf("║ %-8s: %-11d | Força: %-27d ║\n", tipoEnergia, valorEnergia, heroi.getForca());
 
                         System.out.println("╠════════════════════════════════════════════════════════════╣");
                         System.out.println("║                         INVENTÁRIO                         ║");
