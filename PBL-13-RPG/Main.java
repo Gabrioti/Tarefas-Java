@@ -167,7 +167,7 @@ public class Main {
                         if (escolhaMenu == 1) {
                             System.out.println("\nPrepare-se...");
                             System.out.println("Pressione ENTER para chamar o próximo inimigo!");
-                            scanner.nextLine(); 
+                             scanner.nextLine();
                             noIntervalo = false; // Sai da fogueira e vai para a próxima luta
                         } else if (escolhaMenu == 2) {
                             // Dentro do if (escolhaMenu == 2) no Main.java

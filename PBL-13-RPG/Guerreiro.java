@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
+
+    Scanner scanner = new Scanner(System.in);
     public Guerreiro(String nome) {
         super(nome, 100, 50, 15, 10, 30, 0);
     }
@@ -33,101 +37,297 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
         switch (acaoEscolhida) {
             case 1: // Ataque
 
-                // --- FRAME 5 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
-        
                 // --- FRAME 1 ---
-                Main.limparTela();
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║               __                                           ║");
-                System.out.println("║              / /                                           ║");
-                System.out.println("║             / /                                            ║");
-                System.out.println("║            / /                                             ║");
-                System.out.println("║           / /                                              ║");
-                System.out.println("║         (___)                                              ║");
-                System.out.println("║         / /                                                ║");
-                System.out.println("║        / /                                                 ║");
-                System.out.println("║       (_/                                                  ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
 
                 // --- FRAME 2 ---
-                Main.limparTela();
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║      -----______  __                                       ║");
-                System.out.println("║     -----______  / /                                       ║");
-                System.out.println("║    -----______  / /                                        ║");
-                System.out.println("║   -----_______ / /                                         ║");
-                System.out.println("║  -----_______ / /                                          ║");
-                System.out.println("║             (___)                                          ║");
-                System.out.println("║             / /                                            ║");
-                System.out.println("║            / /                                             ║");
-                System.out.println("║           (_/                                              ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
 
                 // --- FRAME 3 ---
-                Main.limparTela();
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║      -----______  __                                       ║");
-                System.out.println("║     -----______  / /                                       ║");
-                System.out.println("║    -----______  / /                                        ║");
-                System.out.println("║   -----_______ / /                                         ║");
-                System.out.println("║  -----_______ / /                                          ║");
-                System.out.println("║             (___)                                          ║");
-                System.out.println("║             / /                                            ║");
-                System.out.println("║            / /                                             ║");
-                System.out.println("║           (_/                                              ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
 
                 // --- FRAME 4 ---
-                Main.limparTela();
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║           -----______  __                                  ║");
-                System.out.println("║          -----______  / /                                  ║");
-                System.out.println("║         -----______  / /                                   ║");
-                System.out.println("║        -----_______ / /                                    ║");
-                System.out.println("║       -----_______ / /                                     ║");
-                System.out.println("║                  (___)                                     ║");
-                System.out.println("║                  / /                                       ║");
-                System.out.println("║                 / /                                        ║");
-                System.out.println("║                (_/                                         ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
 
                 // --- FRAME 5 ---
-                Main.limparTela();
+                Main.limparTela();                                                                                                             
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
-                System.out.println("║           -----______  __                                  ║");
-                System.out.println("║          -----______  / /                                  ║");
-                System.out.println("║         -----______  / /                                   ║");
-                System.out.println("║        -----_______ / /                                    ║");
-                System.out.println("║       -----_______ / /                                     ║");
-                System.out.println("║                  (___)                                     ║");
-                System.out.println("║                  / /                                       ║");
-                System.out.println("║                 / /                                        ║");
-                System.out.println("║                (_/                                         ║");
+                System.out.println("║                    |         |         |                   ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
+
+                // --- FRAME 6 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║                    |         |         |                   ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
+
+                // --- FRAME 7 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║                    |         |         |                   ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("║                               `                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 8 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                       /      |      \\                      ║");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║                    |         |         |                   ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║                         \\    |    /                        ║");
+                System.out.println("║                           \\  |  /                          ║");
+                System.out.println("║                             \\|/                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+                // --- FRAME 9 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                        /     |     \\                       ║");
+                System.out.println("║                       /      |      \\                      ║");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║                    |         |         |                   ║");
+                System.out.println("║                     \\        |        /                    ║");
+                System.out.println("║                       \\      |      /                      ║");
+                System.out.println("║               °   .     \\    |    /   .  °                 ║");
+                System.out.println("║                .     °    \\  |  /  °    .                  ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 10 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                         /    |    \\                        ║");
+                System.out.println("║                        /     |     \\                       ║");
+                System.out.println("║                       /      |      \\                      ║");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║            °       |         |         |       °           ║");
+                System.out.println("║             .       \\        |        /   .                ║");
+                System.out.println("║                 °   . \\      |      /  °        .          ║");
+                System.out.println("║           .     .       \\    |    /       .                ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
+
+                // --- FRAME 11 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                          /   |   \\                         ║");
+                System.out.println("║                         /    |    \\                        ║");
+                System.out.println("║                        /     |     \\                       ║");
+                System.out.println("║                       /      |      \\                      ║");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║         °          |         |         |         .   °     ║");
+                System.out.println("║         .    °.     \\        |        /     °              ║");
+                System.out.println("║      .                \\      |      /            .   .     ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 12 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                    ||_____/  |  \\_____||                   ║");
+                System.out.println("║                          /   |   \\                         ║");
+                System.out.println("║                         /    |    \\                        ║");
+                System.out.println("║                        /     |     \\                       ║");
+                System.out.println("║                       /      |      \\                      ║");
+                System.out.println("║                      /       |       \\                     ║");
+                System.out.println("║                     /        |        \\                    ║");
+                System.out.println("║      °  . °        |         |         |       °   .   °   ║");
+                System.out.println("║    .                \\        |        /          .      .  ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 13 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                     ._____l_______l_____.                  ║");
+                System.out.println("║                     ||_____/  |  \\_____||                  ║");
+                System.out.println("║                           /   |   \\                        ║");
+                System.out.println("║                          /    |    \\                       ║");
+                System.out.println("║                         /     |     \\                      ║");
+                System.out.println("║                        /      |      \\                     ║");
+                System.out.println("║                       /       |       \\                    ║");
+                System.out.println("║                      /        |        \\                   ║");
+                System.out.println("║      .   °      .   |         |         |  .     °    . °  ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 14 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                          ___________                       ║");
+                System.out.println("║                     ._____l_______l_____.                  ║");
+                System.out.println("║                     ||_____/  |  \\_____||                  ║");
+                System.out.println("║                           /   |   \\                        ║");
+                System.out.println("║                          /    |    \\                       ║");
+                System.out.println("║                         /     |     \\                      ║");
+                System.out.println("║                        /      |      \\                     ║");
+                System.out.println("║                       /       |       \\                    ║");
+                System.out.println("║   .   .   .          /        |        \\    .   .     .    ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                
+
+                // --- FRAME 15 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                          ___________                       ║");
+                System.out.println("║                     ._____l_______l_____.                  ║");
+                System.out.println("║                     ||_____/  |  \\_____||                  ║");
+                System.out.println("║                           /   |   \\                        ║");
+                System.out.println("║                          /    |    \\                       ║");
+                System.out.println("║                         /     |     \\                      ║");
+                System.out.println("║                        /      |      \\                     ║");
+                System.out.println("║                       /       |       \\                    ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+                 
+
+                // --- FRAME 16 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                          ___________                       ║");
+                System.out.println("║                     ._____l_______l_____.                  ║");
+                System.out.println("║                     ||_____/  |  \\_____||                  ║");
+                System.out.println("║                           /   |   \\                        ║");
+                System.out.println("║                          /    |    \\                       ║");
+                System.out.println("║                         /     |     \\                      ║");
+                System.out.println("║                        /      |      \\                     ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+            
+
+                // --- FRAME 17 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                          ___________                       ║");
+                System.out.println("║                     ._____l_______l_____.                  ║");
+                System.out.println("║                     ||_____/  |  \\_____||                  ║");
+                System.out.println("║                           /   |   \\                        ║");
+                System.out.println("║                          /    |    \\                       ║");
+                System.out.println("║                         /     |     \\                      ║");
+                System.out.println("║                        /      |      \\                     ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(1000); } catch (InterruptedException e) {} // 100 milissegundos
+                 
 
                 break;
             case 2: // Habilidade Especial
@@ -135,108 +335,108 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║  - _    -                                                  ║");
-                System.out.println("║ _  -  .  />_______________________________                 ║");
-                System.out.println("║   - [####[]______________________________/                 ║");
-                System.out.println("║ _  . _   \\>                                                ║");
-                System.out.println("║ _ -                                                        ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║          />_______________________________                 ║");
+                System.out.println("║     [####[]______________________________/                 ║");
+                System.out.println("║          \\>                                                ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║    -    .                                                  ║");
-                System.out.println("║  _   .     />_______________________________               ║");
-                System.out.println("║    -  [####[]______________________________/               ║");
-                System.out.println("║-   .  _    \\>                                              ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║            />_______________________________               ║");
+                System.out.println("║       [####[]______________________________/               ║");
+                System.out.println("║            \\>                                              ║");
                 System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 3 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║        -                                                   ║");
-                System.out.println("║   - _    .    />_______________________________            ║");
-                System.out.println("║   .  -   [####[]______________________________/            ║");
-                System.out.println("║   _   _       \\>                                           ║");
-                System.out.println("║     -    .                                                 ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║               />_______________________________            ║");
+                System.out.println("║          [####[]______________________________/            ║");
+                System.out.println("║               \\>                                           ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 4 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║       _    ,                                               ║");
-                System.out.println("║   _            />_______________________________           ║");
-                System.out.println("║     _  -  [####[]______________________________/           ║");
-                System.out.println("║          _     \\>                                          ║");
-                System.out.println("║             .                                              ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                />_______________________________           ║");
+                System.out.println("║           [####[]______________________________/           ║");
+                System.out.println("║                \\>                                          ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
 
                 // --- FRAME 5 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║               _                                            ║");
-                System.out.println("║      .     -     />_______________________________         ║");
-                System.out.println("║         -   [####[]______________________________/         ║");
-                System.out.println("║    .      _      \\>                                        ║");
-                System.out.println("║                .                                           ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                  />_______________________________         ║");
+                System.out.println("║             [####[]______________________________/         ║");
+                System.out.println("║                  \\>                                        ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 6 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║                 _                                          ║");
-                System.out.println("║          _    -     />_______________________________      ║");
-                System.out.println("║      ,      -  [####[]______________________________/      ║");
-                System.out.println("║          -    .     \\>                                     ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                     />_______________________________      ║");
+                System.out.println("║                [####[]______________________________/      ║");
+                System.out.println("║                     \\>                                     ║");
                 System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 7 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║                      _                                     ║");
-                System.out.println("║            .     _  .  />_______________________________   ║");
-                System.out.println("║         ,     -   [####[]______________________________/   ║");
-                System.out.println("║           -     _      \\>                                  ║");
-                System.out.println("║                       .                                    ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                        />_______________________________   ║");
+                System.out.println("║                   [####[]______________________________/   ║");
+                System.out.println("║                        \\>                                  ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 8 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║                       _                              .     ║");
-                System.out.println("║                .   _     />_____________________________°__║");
-                System.out.println("║         ,       -    [####[]______________________________/║");
-                System.out.println("║              .    _      \\>                       °    .   ║");
-                System.out.println("║                       -                                   °║");
+                System.out.println("║                                                      .     ║");
+                System.out.println("║                          />_____________________________°__║");
+                System.out.println("║                      [####[]______________________________/║");
+                System.out.println("║                          \\>                       °    .   ║");
+                System.out.println("║                                                           °║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 9 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
-                System.out.println("║                            .                             °.║");
-                System.out.println("║                   ,     _   />_______________________°_____║");
-                System.out.println("║                      -  [####[]____________________________║");
-                System.out.println("║                .         _  \\>                   .       . ║");
-                System.out.println("║                            .                             ° ║");
+                System.out.println("║                                                          °.║");
+                System.out.println("║                             />_______________________°_____║");
+                System.out.println("║                         [####[]____________________________║");
+                System.out.println("║                             \\>                   .       . ║");
+                System.out.println("║                                                          ° ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 10 ---
                 Main.limparTela();
@@ -248,7 +448,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║                                 \\>                        (║");
                 System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
+                try { Thread.sleep(1000); } catch (InterruptedException e) {}
 
                 break;
             case 3: // Recuperar
