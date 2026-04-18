@@ -69,42 +69,49 @@ public void teste() {
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
                 System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
+                System.out.println("║                     ','|'.` )                              ║");
+                System.out.println("║                       .' .'. '.                            ║");
+                System.out.println("║                     ,'  / | \\  '.                          ║");
+                System.out.println("║                         \\ '  \"                             ║");
                 System.out.println("║                       ` . `.' ,'                           ║");
                 System.out.println("║                       . `` ,'. \"                           ║");
                 System.out.println("║                         ~ (   ~ -                          ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
-*/
+
+                // --- FRAME 6 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                     . ','|` ` .                            ║");
+                System.out.println("║                       .'  \"  '                             ║");
+                System.out.println("║                     ,   ' , '  `                           ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 7 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                         (  ) (                             ║");
+                System.out.println("║                          ) ( )                             ║");
+                System.out.println("║                          (  )                              ║");
+                System.out.println("║                           ) /                              ║");
+                System.out.println("║                          ,---.                             ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
 }
-
-/* 
-
-','|'.` )
-  .' .'. '.
-,'  / | \  '.
-    \ '  "  
- ` . `.' ,'a
- . `` ,'. "a
-   ~ (   ~ -a
-'
-
-. ','|` ` .
-  .'  "  '
-,   ' , '  `
-
-   (  ) (
-    ) ( )
-    (  )
-     ) /
-    ,---.
-*/
-
-
 
 /* // --- FRAME 1 ---
                 Main.limparTela();                                                                                                              
@@ -153,6 +160,64 @@ https://www.asciiart.eu/
        \  |  /
          \|/
           `
+*/
+
+/* 
+      )
+     (
+    .-`-.
+    :   :
+    :TNT:
+    :___:
+
+    \|/
+   - o -
+    /-`-.
+    :   :
+    :TNT:
+    :___:
+
+    .---.
+    : | :
+    :-o-:
+    :_|_:
+
+    .---.
+    (\|/)
+    --0--
+    (/|\)
+
+   '.\|/.'
+   (\   /)
+   - -O- -
+   (/   \)
+   ,'/|\'.
+
+'.  \ | /  ,'
+  `. `.' ,'
+ ( .`.|,' .)
+ - ~ -0- ~ -
+ (
+
+','|'.` )
+  .' .'. '.
+,'  / | \  '.
+    \ '  "  
+ ` . `.' ,'
+ . `` ,'. "
+   ~ (   ~ -
+'
+
+. ','|` ` .
+  .'  "  '
+,   ' , '  `
+
+   (  ) (
+    ) ( )
+    (  )
+     ) /
+    ,---.
+
 */
 
 

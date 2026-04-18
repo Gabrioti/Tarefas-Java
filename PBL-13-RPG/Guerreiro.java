@@ -1,8 +1,5 @@
-import java.util.Scanner;
-
 public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
 
-    Scanner scanner = new Scanner(System.in);
     public Guerreiro(String nome) {
         super(nome, 100, 50, 15, 10, 30, 0);
     }
