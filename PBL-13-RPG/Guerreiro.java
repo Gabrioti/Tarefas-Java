@@ -29,10 +29,11 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
     }
 
     @Override
-    public void desenharAcao(int acaoEscolhida) {
+    public void desenharAcao(int acaoEscolhida, int numeroTurno) {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
             case 1: // Ataque
+                if (numeroTurno % 2 == 0) {
 
                 // --- FRAME 1 ---
                 Main.limparTela();                                                                                                              
@@ -324,7 +325,58 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("║                        /      |      \\                     ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
                 try { Thread.sleep(1000); } catch (InterruptedException e) {} // 100 milissegundos
-                 
+                
+                
+                } else {
+
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║            |                                               ║");
+                System.out.println("║            |                                               ║");
+                System.out.println("║            |                                               ║");
+                System.out.println("║           [0]                                              ║");
+                System.out.println("║            |                                               ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(200); } catch (InterruptedException e) {}
+
+                // --- FRAME 2: O Balanço (Espada descendo rápido) ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
+                System.out.println("║                    /                                       ║");
+                System.out.println("║                  /                                         ║");
+                System.out.println("║                /                                           ║");
+                System.out.println("║           [0]/                                             ║");
+                System.out.println("║            |                                               ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {} // Mais rápido para dar sensação de peso!
+
+                // --- FRAME 3: O Impacto (Espada horizontal com faísca no inimigo) ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                      \\  |  /               ║");
+                System.out.println("║           [0]===================>    -- * --               ║");
+                System.out.println("║            |                         /  |  \\               ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(150); } catch (InterruptedException e) {}
+
+                // --- FRAME 4: O Rastro (Finalização do movimento e o rasgo no ar) ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                            /               ║");
+                System.out.println("║           [0]                            /                 ║");
+                System.out.println("║            |                           /                   ║");
+                System.out.println("║             \\                        /                     ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                // Sem Thread.sleep aqui no final! O jogo precisa imprimir a mensagem de dano logo abaixo.
+                break;
+                }
 
                 break;
             case 2: // Habilidade Especial

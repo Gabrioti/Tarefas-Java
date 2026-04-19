@@ -2,25 +2,28 @@ import java.util.Scanner;
 
 public class Combate {
 
-    // Método estático para podermos chamá-r direto sem precisar dar "new Combate()"
+    // Método principal que gerencia a luta. Ele retorna 'true' se o herói vencer.
     public static boolean iniciar(PersonagemBase heroi, Inimigo inimigo, Scanner scanner) {
         
-        Main.limparTela(); // Usamos a limpeza de tela que já existe no Main
+        int contadorTurno = 1; // Relógio da batalha começa no turno 1
+
+        Main.limparTela();
         System.out.println("============================================================");
         System.out.println(" UM " + inimigo.getNome().toUpperCase() + " APARECEU!");
         System.out.println("============================================================");
         System.out.println("Pressione ENTER para iniciar o combate...");
         scanner.nextLine();
 
-        // Loop de turnos da batalha
+        // Loop principal da batalha: roda enquanto os dois estiverem vivos
         while (heroi.estaVivo() && inimigo.estaVivo()) {
+            
             Main.limparTela();
-            Art.desenharCena(heroi, inimigo);
+            Art.desenharCena(heroi, inimigo); // Desenha a tela dividida com a vida
             
             boolean acaoValida = false;
             int acao = 0;
 
-            // Captura a ação do jogador
+            // 1. Fase de Escolha do Jogador
             while (!acaoValida) {
                 try {
                     System.out.println("\nO que você fará?");
@@ -40,15 +43,17 @@ public class Combate {
                 }
             }
 
+            // 2. Fase de Animação do Herói
             Main.limparTela();
-            System.out.println("============================================================");
-            System.out.println("                       TURNO ATUAL                          ");
-            System.out.println("============================================================");
+            System.out.println("╔════════════════════════════════════════════════════════════╗");
+            // Centraliza o texto "TURNO X" mantendo a borda perfeitamente alinhada
+            System.out.printf("║                       TURNO %-3d                           ║\n", contadorTurno);
+            System.out.println("╚════════════════════════════════════════════════════════════╝");
 
-            // Chama a animação correspondente
-            heroi.desenharAcao(acao);
+            // Passamos a ação e o turno atual para a classe saber qual arte desenhar
+            heroi.desenharAcao(acao, contadorTurno);
 
-            // Executa a ação do jogador
+            // 3. Fase de Execução do Dano do Herói
             switch (acao) {
                 case 1:
                     heroi.atacar(inimigo);
@@ -65,30 +70,34 @@ public class Combate {
                     break;
             }
 
+            // Pausa mágica de 2.5s para o jogador conseguir ver a arte e ler quanto de dano causou
             try { Thread.sleep(2500); } catch (InterruptedException e) {}
 
             System.out.println("------------------------------------------------------------");
 
-            // Turno do inimigo (se ele sobreviveu ao ataque do jogador)
+            // 4. Fase do Inimigo (se ele não morreu com o seu ataque)
             if (inimigo.estaVivo()) {
                 System.out.println("Turno do Inimigo:");
-                inimigo.tomarDecisao(heroi);
+                inimigo.tomarDecisao(heroi); // Inimigo ataca, cura ou usa habilidade
                 System.out.println("============================================================");
                 
-                // Pausa automática para ler a ação do inimigo
+                // Pausa de 3s para o jogador ler o que o inimigo fez antes da tela limpar
                 try { Thread.sleep(3000); } catch (InterruptedException e) {}
 
             } else {
+                // Inimigo Morreu!
                 System.out.println(inimigo.getNome() + " caiu!");
                 System.out.println("============================================================");
                 
-                // Pausa manual com ENTER apenas na hora da vitória
                 System.out.println("Pressione ENTER para comemorar a vitória...");
                 scanner.nextLine(); 
             }
+
+            // O turno acabou, relógio avança!
+            contadorTurno++; 
         }
 
-        // Se o loop acabar e o herói ainda tiver vida, ele venceu.
+        // Se o loop quebrou e o herói ainda tem vida, quer dizer que ele ganhou!
         return heroi.estaVivo(); 
     }
 }

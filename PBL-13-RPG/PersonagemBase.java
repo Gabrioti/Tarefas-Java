@@ -95,6 +95,5 @@ public abstract class PersonagemBase {
     }
     public abstract void atacar(PersonagemBase alvo);
     
-    // Novo método abstrato: Todo personagem terá que saber desenhar sua própria ação
-    public abstract void desenharAcao(int acaoEscolhida);
+    public abstract void desenharAcao(int acaoEscolhida, int numeroTurno);
 }

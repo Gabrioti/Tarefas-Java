@@ -29,21 +29,21 @@ public class Inimigo extends PersonagemBase implements HabilidadeEspecial, Recup
     public void tomarDecisao(PersonagemBase alvo) {
         if (getMana() >= 10 && isBoss) {
             Main.limparTela();
-            this.desenharAcao(2); // Chama a arte de habilidade do próprio inimigo
+            this.desenharAcao(2, 0); // Chama a arte de habilidade do próprio inimigo
             usarHabilidade(alvo);
         } else if (getVida() < 20 && getDefesa() == 0) {
             Main.limparTela();
-            this.desenharAcao(3); // Chama a arte de cura do próprio inimigo
+            this.desenharAcao(3,0); // Chama a arte de cura do próprio inimigo
             recuperar();
         } else {
             Main.limparTela();
-            this.desenharAcao(1); // Chama a arte de ataque do próprio inimigo
+            this.desenharAcao(1, 0); // Chama a arte de ataque do próprio inimigo
             atacar(alvo);
         }
     }
 
     @Override
-    public void desenharAcao(int acaoEscolhida) {
+    public void desenharAcao(int acaoEscolhida, int numeroTurno) {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
             case 1: // Ataque

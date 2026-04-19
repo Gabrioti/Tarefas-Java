@@ -28,7 +28,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
     }
 
     @Override
-    public void desenharAcao(int acaoEscolhida) {
+    public void desenharAcao(int acaoEscolhida, int numeroTurno) {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
             case 1: // Ataque

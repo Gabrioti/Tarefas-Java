@@ -28,9 +28,130 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
     }
 
     @Override
-    public void desenharAcao(int acaoEscolhida) {
+    public void desenharAcao(int acaoEscolhida, int numeroTurno) {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         switch (acaoEscolhida) {
+            
+            case 1: // Ataque
+                if (numeroTurno % 2 == 0) {
+                // --- FRAME 1 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                    ~~    .--.                              ║");
+                System.out.println("║                ~~       /    \\                             ║");
+                System.out.println("║            ~~          |      |                            ║");
+                System.out.println("║                  ~~    \\    /                              ║");
+                System.out.println("║                    ~~    '--'                              ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 2 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                              ~~    .--.                    ║");
+                System.out.println("║                          ~~       /    \\                   ║");
+                System.out.println("║                      ~~          |      |                  ║");
+                System.out.println("║                            ~~    \\    /                    ║");
+                System.out.println("║                              ~~    '--'                    ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 3 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                        ~~    .--.          ║");
+                System.out.println("║                                    ~~       /    \\         ║");
+                System.out.println("║                                ~~          |      |        ║");
+                System.out.println("║                                      ~~    \\    /          ║");
+                System.out.println("║                                        ~~    '--'          ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 4 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                  ~~    .--.║");
+                System.out.println("║                                              ~~       /    ║");
+                System.out.println("║                                          ~~          |     ║");
+                System.out.println("║                                                ~~    \\    ║");
+                System.out.println("║                                                  ~~    '--'║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 5 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                          . ║");
+                System.out.println("║                                                       .   °(║");
+                System.out.println("║                                                   °      ( ║");
+                System.out.println("║                                                      .   ( ║");
+                System.out.println("║                                                         °( ║");
+                System.out.println("║                                                      °    (║");
+                System.out.println("║                                                          . ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 6 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                     .   (  ║");
+                System.out.println("║                                                       °  ( ║");
+                System.out.println("║                                                    .    (  ║");
+                System.out.println("║                                                     °    ( ║");
+                System.out.println("║                                                         (  ║");
+                System.out.println("║                                                      .     ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 7 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                           .║");
+                System.out.println("║                                                        °  (║");
+                System.out.println("║                                                     .    ~(║");
+                System.out.println("║                                                         ° (║");
+                System.out.println("║                                                     .     (║");
+                System.out.println("║                                                          ~(║");
+                System.out.println("║                                                       °   (║");
+                System.out.println("║                                                           .║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                // --- FRAME 8 ---
+                Main.limparTela();
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
+                System.out.println("║                                                           .║");
+                System.out.println("║                                                           (║");
+                System.out.println("║                                                          ~(║");
+                System.out.println("║                                                          ~(║");
+                System.out.println("║                                                          ~(║");
+                System.out.println("║                                                          ~(║");
+                System.out.println("║                                                           (║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(100); } catch (InterruptedException e) {}
+
+                } else {}
+
+                break;
+
             case 2: // Habilidade Especial
                 // --- FRAME 1 ---
                 Main.limparTela();                                                                                                              
@@ -146,122 +267,6 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
 
                 break;
 
-            case 1: // Ataque
-                // --- FRAME 1 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                    ~~    .--.                              ║");
-                System.out.println("║                ~~       /    \\                             ║");
-                System.out.println("║            ~~          |      |                            ║");
-                System.out.println("║                  ~~    \\    /                              ║");
-                System.out.println("║                    ~~    '--'                              ║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 2 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                              ~~    .--.                    ║");
-                System.out.println("║                          ~~       /    \\                   ║");
-                System.out.println("║                      ~~          |      |                  ║");
-                System.out.println("║                            ~~    \\    /                    ║");
-                System.out.println("║                              ~~    '--'                    ║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 3 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                        ~~    .--.          ║");
-                System.out.println("║                                    ~~       /    \\         ║");
-                System.out.println("║                                ~~          |      |        ║");
-                System.out.println("║                                      ~~    \\    /          ║");
-                System.out.println("║                                        ~~    '--'          ║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 4 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                  ~~    .--.║");
-                System.out.println("║                                              ~~       /    ║");
-                System.out.println("║                                          ~~          |     ║");
-                System.out.println("║                                                ~~    \\    ║");
-                System.out.println("║                                                  ~~    '--'║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 5 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                          . ║");
-                System.out.println("║                                                       .   °(║");
-                System.out.println("║                                                   °      ( ║");
-                System.out.println("║                                                      .   ( ║");
-                System.out.println("║                                                         °( ║");
-                System.out.println("║                                                      °    (║");
-                System.out.println("║                                                          . ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 6 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                     .   (  ║");
-                System.out.println("║                                                       °  ( ║");
-                System.out.println("║                                                    .    (  ║");
-                System.out.println("║                                                     °    ( ║");
-                System.out.println("║                                                         (  ║");
-                System.out.println("║                                                      .     ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 7 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                           .║");
-                System.out.println("║                                                        °  (║");
-                System.out.println("║                                                     .    ~(║");
-                System.out.println("║                                                         ° (║");
-                System.out.println("║                                                     .     (║");
-                System.out.println("║                                                          ~(║");
-                System.out.println("║                                                       °   (║");
-                System.out.println("║                                                           .║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                // --- FRAME 8 ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
-                System.out.println("║                                                           .║");
-                System.out.println("║                                                           (║");
-                System.out.println("║                                                          ~(║");
-                System.out.println("║                                                          ~(║");
-                System.out.println("║                                                          ~(║");
-                System.out.println("║                                                          ~(║");
-                System.out.println("║                                                           (║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {}
-
-                break;
                 
             case 3: // Recuperar
                 Main.limparTela();
