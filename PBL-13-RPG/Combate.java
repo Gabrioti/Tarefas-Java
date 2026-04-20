@@ -28,13 +28,26 @@ public class Combate {
                 try {
                     System.out.println("\nO que você fará?");
                     System.out.println("1 - Atacar");
-                    System.out.println("2 - Habilidade Especial");
+                    
+                    // Mostra se a habilidade está pronta ou quantos ataques faltam
+                    if (heroi.getContadorAtaques() >= 2) {
+                        System.out.println("2 - Habilidade Especial [PRONTA!]");
+                    } else {
+                        System.out.println("2 - Habilidade Especial [Carregando: " + (2 - heroi.getContadorAtaques()) + " ataques restantes]");
+                    }
                     System.out.println("3 - Recuperar");
                     System.out.print("Sua escolha: ");
                     acao = Integer.parseInt(scanner.nextLine());
 
-                    if (acao >= 1 && acao <= 3) {
+                    // Verifica se pode usar a ação escolhida
+                    if (acao == 1 || acao == 3) {
                         acaoValida = true;
+                    } else if (acao == 2) {
+                        if (heroi.getContadorAtaques() >= 2) {
+                            acaoValida = true; // Permite o uso!
+                        } else {
+                            System.out.println("\n A Habilidade ainda não está carregada!");
+                        }
                     } else {
                         System.out.println("Ação inválida. Escolha 1, 2 ou 3.");
                     }
@@ -57,10 +70,12 @@ public class Combate {
             switch (acao) {
                 case 1:
                     heroi.atacar(inimigo);
+                    heroi.adicionarAtaque(); // <--- SOMA 1 NO CONTADOR DE ATAQUE
                     break;
                 case 2:
                     if (heroi instanceof HabilidadeEspecial) {
                         ((HabilidadeEspecial) heroi).usarHabilidade(inimigo);
+                        heroi.zerarAtaques(); // <--- ZERA O CONTADOR APÓS USAR
                     }
                     break;
                 case 3:
@@ -70,13 +85,11 @@ public class Combate {
                     break;
             }
 
-            // Pausa mágica de 2.5s para o jogador conseguir ver a arte e ler quanto de dano causou
             try { Thread.sleep(2500); } catch (InterruptedException e) {}
 
             System.out.println("------------------------------------------------------------");
 
             // 4. Fase do Inimigo (se ele não morreu com o seu ataque)
-            // 4. Fase do Inimigo
             if (inimigo.estaVivo()) {
                 System.out.println("Turno do Inimigo:");
                 // ---> ATUALIZE ESTA LINHA AQUI <---

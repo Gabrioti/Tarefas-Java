@@ -36,6 +36,8 @@ public abstract class PersonagemBase {
     public String getNome() { return nome; }
     public int getVida() { return vida; }
     public void setVida(int vida) { this.vida = vida; }
+    public int getVidaMaxima() { return vidaMaxima; }
+    public void setVidaMaxima(int vidaMaxima) { this.vidaMaxima = vidaMaxima; }
     public int getDefesa() { return defesa; }
     public void setDefesa(int defesa) { this.defesa = defesa; }
     public int getForca() { return forca; }
@@ -49,22 +51,28 @@ public abstract class PersonagemBase {
     public int getNivel() { return nivel; }
     public int getExperiencia() {  return experiencia; }
 
+    private int contadorAtaques = 0;
+
+    public int getContadorAtaques() { return contadorAtaques; }
+    public void adicionarAtaque() { contadorAtaques++; }
+    public void zerarAtaques() { contadorAtaques = 0; }
+
     public void adicionarOuro(int quantidade) {
         this.ouro += quantidade;
         System.out.println("Você recebeu " + quantidade + " moedas de ouro!");
     }
     
-    public void ganharExperiencia(int xp) {
-        this.experiencia += xp;
-        if (this.experiencia >= 100) {
-            this.nivel++;
-            this.experiencia = 0;
-            this.forca += 5;
-            this.vidaMaxima += 20;
-            this.vida = this.vidaMaxima;
-            System.out.println("\n*** " + this.nome + " SUBIU PARA O NÍVEL " + this.nivel + " ***");
-        }
+    public void ganharExperiencia(int pontos) {
+    this.experiencia += pontos;
+    if (this.experiencia >= 100) {
+        this.nivel++;
+        this.experiencia = 0;
+        // Aumenta a vida máxima base ao subir de nível
+        this.vidaMaxima += 10; 
+        this.setVida(this.vidaMaxima); 
+        System.out.println("\n PARABÉNS! Você subiu para o nível " + nivel + "!");
     }
+}
 
     public void receberDano(int danoPuro) {
         // A defesa absorve o dano primeiro
