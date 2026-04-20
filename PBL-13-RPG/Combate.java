@@ -76,9 +76,11 @@ public class Combate {
             System.out.println("------------------------------------------------------------");
 
             // 4. Fase do Inimigo (se ele não morreu com o seu ataque)
+            // 4. Fase do Inimigo
             if (inimigo.estaVivo()) {
                 System.out.println("Turno do Inimigo:");
-                inimigo.tomarDecisao(heroi); // Inimigo ataca, cura ou usa habilidade
+                // ---> ATUALIZE ESTA LINHA AQUI <---
+                inimigo.tomarDecisao(heroi, contadorTurno); 
                 System.out.println("============================================================");
                 
                 // Pausa de 3s para o jogador ler o que o inimigo fez antes da tela limpar

@@ -15,13 +15,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PersonagemBase heroi = null;
+        Inimigo inimigo = null;
         ArrayList<Item> inventario = new ArrayList<>(); // Inventário do herói para armazenar itens coletados e comprados
         ArrayList<Inimigo> filaInimigos = new ArrayList<>(); // Fila de inimigos para o jogo, cada um com suas características e dificuldade
 
+
         // Configurando a fila de Inimigos (Fase 1, Fase 2 e Boss)
-        filaInimigos.add(new Inimigo("Goblin Saqueador", 40, 10, 8, 0, 10, false));
-        filaInimigos.add(new Inimigo("Orc Furioso", 70, 20, 12, 0, 20, false));
-        filaInimigos.add(new Inimigo("Rei Demônio (BOSS)", 150, 50, 20, 50, 50, true));
+        filaInimigos.add(new GoblinSaqueador());
+        filaInimigos.add(new OrcFurioso());
+        filaInimigos.add(new ReiDemonio());
 
         limparTela();
         System.out.println("============================================================");
@@ -123,7 +125,7 @@ public class Main {
 
         // 3. LOOP PRINCIPAL DO JOGO (PROGRESSÃO DE INIMIGOS)
         for (int i = 0; i < filaInimigos.size(); i++) {
-            Inimigo inimigo = filaInimigos.get(i);
+            inimigo = filaInimigos.get(i);
             
             // Chama o novo arquivo de combate. O código inteiro de luta está lá agora!
             boolean heroiSobreviveu = Combate.iniciar(heroi, inimigo, scanner);

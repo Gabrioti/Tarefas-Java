@@ -5,14 +5,14 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
 
     @Override
     public void atacar(PersonagemBase alvo) {
-        System.out.println(getNome() + " dispara um dardo mágico!");
+        System.out.println(getNome() + " acerta a bola de fogo no alvo!");
         alvo.receberDano(getForca());
     }
 
     @Override
     public void usarHabilidade(PersonagemBase alvo) {
         if (getMana() >= 20) {
-            System.out.println(getNome() + " conjura BOLA DE FOGO!");
+            System.out.println(getNome() + " causou uma explosão mágica!");
             alvo.receberDano(getForca() * 3);
             setMana(getMana() - 20);
         } else {

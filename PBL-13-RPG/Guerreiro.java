@@ -6,14 +6,14 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
 
     @Override
     public void atacar(PersonagemBase alvo) {
-        System.out.println(getNome() + "Um golpe cortante foi feito!");
+        System.out.println(getNome() + " fez um golpe cortante no alvo!");
         alvo.receberDano(getForca());
     }
 
     @Override
     public void usarHabilidade(PersonagemBase alvo) {
         if (getStamina() >= 15) {
-            System.out.println(getNome() + " usa INVESTIDA BRUTAL!");
+            System.out.println(getNome() + " O ataque acerta o alvo!");
             alvo.receberDano(getForca() * 2);
             setStamina(getStamina() - 15);
         } else {
