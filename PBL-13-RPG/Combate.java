@@ -26,6 +26,7 @@ public class Combate {
             // 1. Fase de Escolha do Jogador
             while (!acaoValida) {
                 try {
+                    System.out.println("\nTurno: " + contadorTurno);
                     System.out.println("\nO que você fará?");
                     System.out.println("1 - Atacar");
                     
@@ -43,7 +44,7 @@ public class Combate {
                     if (acao == 1 || acao == 3) {
                         acaoValida = true;
                     } else if (acao == 2) {
-                        if (heroi.getContadorAtaques() >= 2) {
+                        if ((heroi.getContadorAtaques() >= 2 && heroi.getMana() >= 10) || (heroi.getContadorAtaques() >= 2 && heroi.getStamina() >= 10)) {
                             acaoValida = true; // Permite o uso!
                         } else {
                             System.out.println("\n A Habilidade ainda não está carregada!");
@@ -58,10 +59,6 @@ public class Combate {
 
             // 2. Fase de Animação do Herói
             Main.limparTela();
-            System.out.println("╔════════════════════════════════════════════════════════════╗");
-            // Centraliza o texto "TURNO X" mantendo a borda perfeitamente alinhada
-            System.out.printf("║                       TURNO %-3d                           ║\n", contadorTurno);
-            System.out.println("╚════════════════════════════════════════════════════════════╝");
 
             // Passamos a ação e o turno atual para a classe saber qual arte desenhar
             heroi.desenharAcao(acao, contadorTurno);
@@ -115,4 +112,5 @@ public class Combate {
         // Se o loop quebrou e o herói ainda tem vida, quer dizer que ele ganhou!
         return heroi.estaVivo(); 
     }
+
 }

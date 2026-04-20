@@ -1,22 +1,34 @@
 public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
+
+    /*
+        O arqueiro é um personagem equilibrado, com boa mobilidade e ataques à distância.
+        Ele tem uma habilidade especial que dispara uma sequência de flechas, causando dano em área. 
+        Sua recuperação é moderada, permitindo que ele se mantenha no combate por mais tempo, mas sem a robustez do guerreiro ou a magia do mago. 
+        Seus ataques e habilidades consomem tanto stamina quanto mana, incentivando o jogador a gerenciar ambos os recursos para maximizar seu potencial de dano.
+    */
+
     public Arqueiro(String nome) {
-        super(nome, 85, 30, 12, 20, 20, 0);
+        super(nome, 85, 30, 12, 20, 20);
     }
 
     @Override
     public void atacar(PersonagemBase alvo) {
         System.out.println(getNome() + " atira uma flecha no alvo!");
-        alvo.receberDano(getForca());
+        alvo.receberDano(getForca() + ((int)getForca() / getMana()));  
+        //Dano base + bônus de acordo com a mana (quanto mais mana, mais dano). o (int) é para arredondar o bônus para baixo, evitando números quebrados.                                                
+        setMana(getMana() - 1);
+        setStamina(getStamina() - 1);
     }
 
     @Override
     public void usarHabilidade(PersonagemBase alvo) {
-        if (getStamina() >= 10) {
+        if (getStamina() >= 10 && getMana() >= 10) {
             System.out.println(getNome() + " acertou varias flechas no alvo!");
             alvo.receberDano((int)(getForca() * 2.5));
             setStamina(getStamina() - 10);
+            setMana(getMana() - 10);
         } else {
-            System.out.println("Stamina insuficiente!");
+            System.out.println("Stamina ou Mana insuficientes!");
         }
     }
 
@@ -25,6 +37,8 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
         System.out.println(getNome() + " se recuperou!");
         setVida(getVida() + 10);
         restaurarDefesaTotal();
+        restaurarStaminaTotal();
+        restaurarManaTotal();
     }
 
     @Override

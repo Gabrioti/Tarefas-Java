@@ -6,15 +6,16 @@ public abstract class PersonagemBase {
     private int vida;
     private int defesaMaxima;
     private int staminaMaxima;
+    private int manaMaxima;
     private int defesa; // Funciona como barra de escudo
     private int forca;
     private int mana;
     private int stamina;
-    private int ult;
+    //private int ult;
     private int nivel;
     private int experiencia;
 
-    public PersonagemBase(String nome, int vida, int defesa, int forca, int mana, int stamina, int ult) {
+    public PersonagemBase(String nome, int vida, int defesa, int forca, int mana, int stamina) {
         this.nome = nome;
         this.vidaMaxima = vida;
         this.vida = vida;
@@ -24,8 +25,9 @@ public abstract class PersonagemBase {
         this.stamina = stamina;
         this.forca = forca;
         this.mana = mana;
+        this.manaMaxima = mana;
         this.stamina = stamina;
-        this.ult = ult;
+        //this.ult = ult;
         this.nivel = 1;
         this.experiencia = 0;
     }
@@ -46,8 +48,8 @@ public abstract class PersonagemBase {
     public void setMana(int mana) { this.mana = mana; }
     public int getStamina() { return stamina; }
     public void setStamina(int stamina) { this.stamina = stamina; }
-    public int getUlt() { return ult; }
-    public void setUlt(int ult) { this.ult = ult; }
+    //public int getUlt() { return ult; }
+    //public void setUlt(int ult) { this.ult = ult; }
     public int getNivel() { return nivel; }
     public int getExperiencia() {  return experiencia; }
 
@@ -97,6 +99,10 @@ public abstract class PersonagemBase {
 
     public void restaurarStaminaTotal() {
         this.stamina = this.staminaMaxima;
+    }
+
+    public void restaurarManaTotal() {
+        this.mana = this.manaMaxima;
     }
     public boolean estaVivo() {
         return this.vida > 0;

@@ -1,13 +1,20 @@
 public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
 
+    /*
+        O guerreiro é um personagem robusto, com alta vida e defesa, mas com ataques mais simples.
+        Ele tem uma habilidade especial que é um ataque poderoso, causando dano significativo ao inimigo.
+        Seus ataques básicos são mais fracos, mas ele compensa isso com sua resistência e capacidade de se recuperar durante a batalha.
+    */
+
     public Guerreiro(String nome) {
-        super(nome, 100, 50, 15, 10, 30, 0);
+        super(nome, 100, 50, 15, 0, 30);
     }
 
     @Override
     public void atacar(PersonagemBase alvo) {
         System.out.println(getNome() + " fez um golpe cortante no alvo!");
         alvo.receberDano(getForca());
+        setStamina(getStamina() - 1);
     }
 
     @Override
@@ -329,52 +336,166 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
                 } else {
 
-                Main.limparTela();
+                // --- FRAME 1 ---
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
-                System.out.println("║            |                                               ║");
-                System.out.println("║            |                                               ║");
-                System.out.println("║            |                                               ║");
-                System.out.println("║           [0]                                              ║");
-                System.out.println("║            |                                               ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(200); } catch (InterruptedException e) {}
-
-                // --- FRAME 2: O Balanço (Espada descendo rápido) ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
-                System.out.println("║                    /                                       ║");
-                System.out.println("║                  /                                         ║");
-                System.out.println("║                /                                           ║");
-                System.out.println("║           [0]/                                             ║");
-                System.out.println("║            |                                               ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(100); } catch (InterruptedException e) {} // Mais rápido para dar sensação de peso!
-
-                // --- FRAME 3: O Impacto (Espada horizontal com faísca no inimigo) ---
-                Main.limparTela();
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
+                System.out.println("║                 _                                          ║");
+                System.out.println("║                / |                                         ║");
+                System.out.println("║               / /                                          ║");
+                System.out.println("║            \\/ /                                            ║");
+                System.out.println("║             /\\/                                            ║");
+                System.out.println("║             \\/\\                                            ║");
                 System.out.println("║                                                            ║");
-                System.out.println("║                                      \\  |  /               ║");
-                System.out.println("║           [0]===================>    -- * --               ║");
-                System.out.println("║            |                         /  |  \\               ║");
+                System.out.println("║                                                            ║");
                 System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(150); } catch (InterruptedException e) {}
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
-                // --- FRAME 4: O Rastro (Finalização do movimento e o rasgo no ar) ---
-                Main.limparTela();
+                // --- FRAME 2 ---
+                Main.limparTela();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " desfere o CORTE!");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                   _                                        ║");
+                System.out.println("║                  / |                                       ║");
+                System.out.println("║                 / /                                        ║");
+                System.out.println("║              \\/ /                                          ║");
+                System.out.println("║               /\\/                                          ║");
+                System.out.println("║               \\/\\                                          ║");
                 System.out.println("║                                                            ║");
-                System.out.println("║                                            /               ║");
-                System.out.println("║           [0]                            /                 ║");
-                System.out.println("║            |                           /                   ║");
-                System.out.println("║             \\                        /                     ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
-                // Sem Thread.sleep aqui no final! O jogo precisa imprimir a mensagem de dano logo abaixo.
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 3 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                     _                                      ║");
+                System.out.println("║                    / |                                     ║");
+                System.out.println("║                   / /                                      ║");
+                System.out.println("║                \\/ /                                        ║");
+                System.out.println("║                 /\\/                                        ║");
+                System.out.println("║                 \\/\\                                        ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 4 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                 _|__________¦                              ║");
+                System.out.println("║                |_|_________/                               ║");
+                System.out.println("║                  |                                         ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 5 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                   _|__________¦                            ║");
+                System.out.println("║                  |_|_________/                             ║");
+                System.out.println("║                    |                                       ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 6 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                               ¦                            ║");
+                System.out.println("║                   _|__________¦                            ║");
+                System.out.println("║                  |_|_________/                             ║");
+                System.out.println("║                    |                                       ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 7 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                              ¦                             ║");
+                System.out.println("║                 _|__________¦                              ║");
+                System.out.println("║                |_|_________/                               ║");
+                System.out.println("║                  |                                         ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 8 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                  /\\/                                       ║");
+                System.out.println("║                  \\/\\                                       ║");
+                System.out.println("║                  /\\ \\                                      ║");
+                System.out.println("║                    \\ \\                                     ║");
+                System.out.println("║                     \\_|                                    ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 9 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                /\\/                                         ║");
+                System.out.println("║                \\/\\                                         ║");
+                System.out.println("║                /\\ \\                                        ║");
+                System.out.println("║                  \\ \\                                       ║");
+                System.out.println("║                   \\_|                                      ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
+                // --- FRAME 10 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║              /\\/                                           ║");
+                System.out.println("║              \\/\\                                           ║");
+                System.out.println("║              /\\ \\                                          ║");
+                System.out.println("║                \\ \\                                         ║");
+                System.out.println("║                 \\_|                                        ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
+
                 break;
                 }
 

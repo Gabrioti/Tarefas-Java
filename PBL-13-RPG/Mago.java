@@ -1,12 +1,20 @@
 public class Mago extends PersonagemBase implements HabilidadeEspecial, Recuperavel {
+
+        /*
+            O mago é um personagem frágil, com baixa defesa e vida, mas compensa isso com ataques poderosos e habilidades mágicas. 
+            Ele tem uma habilidade especial que causa uma explosão de fogo, gerando bastante dano. 
+            Sua recuperação é focada em restaurar mana, permitindo que ele continue lançando feitiços durante o combate. 
+            O mago é ideal para jogadores que gostam de causar grandes danos de forma estratégica, mas exigem cuidado para evitar serem atingidos pelos inimigos.
+        */
     public Mago(String nome) {
-        super(nome, 70, 20, 8, 50, 10, 0);
+        super(nome, 70, 20, 8, 50, 0);
     }
 
     @Override
     public void atacar(PersonagemBase alvo) {
         System.out.println(getNome() + " acerta a bola de fogo no alvo!");
         alvo.receberDano(getForca());
+        setMana(getMana() + 2); // O mago ganha mana a cada ataque, incentivando o uso de ataques básicos para carregar a habilidade especial
     }
 
     @Override

@@ -33,7 +33,7 @@ public class GoblinSaqueador extends Inimigo implements Recuperavel {
     public void desenharAcao(int acaoEscolhida, int numeroTurno) {
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         if (acaoEscolhida == 1) { // Ataque
-            System.out.printf("║ %-58s ║\n", getNome() + " ataca com sua adaga enferrujada!");
+            System.out.printf("║ %-58s ║\n", getNome() + " ataca com sua lança enferrujada!");
             System.out.println("║                                                            ║");
             System.out.println("║            [ COLOQUE A ARTE DO GOBLIN AQUI ]               ║");
             System.out.println("║                                                            ║");

@@ -6,37 +6,45 @@ public class Loja {
     public static void menuLoja(PersonagemBase heroi, ArrayList<Item> inventario, Scanner scanner) {
         boolean saindo = false;
 
-        // Lista de itens disponíveis para venda
+        // O Catálogo é criado vazio e preenchido dependendo de quem entrou
         ArrayList<Item> catalogo = new ArrayList<>();
-        catalogo.add(new Item("Espada de Aço", 10, 0));      // Custo sugerido: 50
-        catalogo.add(new Item("Escudo de Carvalho", 0, 15));  // Custo sugerido: 40
-        catalogo.add(new Item("Amuleto de Vitalidade", 5, 5)); // Custo sugerido: 70
 
-        int[] precos = {50, 40, 70};
+        // 1. ITENS UNIVERSAIS (Todos podem comprar)
+        catalogo.add(new Item("Amuleto de Vitalidade", 5, 5, 70));
+        catalogo.add(new Item("Anel do Protetor", 0, 10, 40));
+
+        // 2. ITENS ESPECÍFICOS DE CLASSE
+        if (heroi instanceof Guerreiro) {
+            catalogo.add(new Item("Espada Montante de Aço", 15, 0, 80));
+            catalogo.add(new Item("Armadura de Placas pesada", 0, 20, 100));
+        } else if (heroi instanceof Mago) {
+            catalogo.add(new Item("Cajado do Vazio", 18, 0, 80));
+            catalogo.add(new Item("Manto Estrelado", 0, 15, 100));
+        } else if (heroi instanceof Arqueiro) {
+            catalogo.add(new Item("Arco Recurvo Élfico", 16, 0, 80));
+            catalogo.add(new Item("Traje de Couro Furtivo", 0, 18, 100));
+        }
 
         while (!saindo) {
             Main.limparTela();
             System.out.println("╔════════════════════════════════════════════════════════════╗");
             System.out.println("║                    LOJA DE EQUIPAMENTOS                    ║");
             System.out.println("╠════════════════════════════════════════════════════════════╣");
-            
-            // Imprime o ouro com a parede esquerda e direita fixas
             System.out.printf("║ Seu Ouro: %-48d ║\n", heroi.getOuro());
             System.out.println("║------------------------------------------------------------║");
             
             for (int i = 0; i < catalogo.size(); i++) {
                 Item item = catalogo.get(i);
                 
-                // Montamos a frase do item calculando os espaços para não passar de 58 caracteres
-                String linhaItem = String.format("%d. %-21s | Atq:+%-2d | Def:+%-2d | $%3d", 
+                // Agora pegamos o preço diretamente do objeto Item
+                String linhaItem = String.format("%d. %-24s | Atq:+%-2d | Def:+%-2d | $%3d", 
                                   (i + 1), item.getNome(), item.getBonusForca(), 
-                                  item.getBonusDefesa(), precos[i]);
+                                  item.getBonusDefesa(), item.getPreco());
                 
-                // Imprimimos a linha já com as paredes
                 System.out.printf("║ %-58s ║\n", linhaItem);
             }
             
-            System.out.printf("║ %-58s ║\n", ""); // Linha em branco para dar um respiro
+            System.out.printf("║ %-58s ║\n", ""); 
             System.out.printf("║ %-58s ║\n", "0. Sair da Loja");
             System.out.println("╚════════════════════════════════════════════════════════════╝");
             System.out.print("O que deseja comprar? ");
@@ -48,26 +56,30 @@ public class Loja {
                     saindo = true;
                 } else if (escolha > 0 && escolha <= catalogo.size()) {
                     int indice = escolha - 1;
-                    int custo = precos[indice];
                     Item itemComprado = catalogo.get(indice);
+                    int custo = itemComprado.getPreco(); // Preço vindo do item
 
                     if (heroi.getOuro() >= custo) {
                         heroi.setOuro(heroi.getOuro() - custo);
                         inventario.add(itemComprado);
                         
-                        // Aplica os bônus do item imediatamente
+                        // Aplica os bônus
                         heroi.setForca(heroi.getForca() + itemComprado.getBonusForca());
                         heroi.setDefesa(heroi.getDefesa() + itemComprado.getBonusDefesa());
 
-                        System.out.println("\n" + itemComprado.getNome() + " comprado com sucesso!");
+                        System.out.println("\n " + itemComprado.getNome() + " comprado com sucesso!");
                     } else {
-                        System.out.println("\nOuro insuficiente!");
+                        System.out.println("\n Ouro insuficiente!");
                     }
                     System.out.println("Pressione ENTER para continuar...");
                     scanner.nextLine();
+                } else {
+                    System.out.println("Opção inválida.");
+                    try { Thread.sleep(1000); } catch (InterruptedException e) {}
                 }
-            } catch (Exception e) {
-                System.out.println("Entrada inválida.");
+            } catch (NumberFormatException e) {
+                System.out.println("Erro: Digite apenas o número do item.");
+                try { Thread.sleep(1000); } catch (InterruptedException ex) {}
             }
         }
     }

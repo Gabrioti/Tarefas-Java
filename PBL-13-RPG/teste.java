@@ -5,6 +5,44 @@ public void teste() {
 }
 
 /*
+  
+            _
+           / |
+          / /  
+        \/ /
+        /\/
+        \/\
+
+         _|________
+        |_|_______/
+          |
+
+        /\/
+        \/\
+        /\ \
+          \ \
+           \_|
+
+*/
+
+/* // --- FRAME 1 ---
+                Main.limparTela();                                                                                                              
+                System.out.println("╔════════════════════════════════════════════════════════════╗");
+                System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("║                                                            ║");
+                System.out.println("╚════════════════════════════════════════════════════════════╝");
+                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
+*/
+
+/*
          ,   ,
         /(   )\
         \ \_/ /   , /\ ,
@@ -45,22 +83,7 @@ jgs  {}  /  \_/\=/\_/  \
 
 */
 
-/* // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
-                System.out.println("╔════════════════════════════════════════════════════════════╗");
-                System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com as GARRAS!");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("║                                                            ║");
-                System.out.println("╚════════════════════════════════════════════════════════════╝");
-                try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
-*/
+
 
 /*
 >>>>>-----------------------> 23 -    °
@@ -99,25 +122,7 @@ https://www.asciiart.eu/
           `
 */
 
-/*
-  
 
-
-            _
-           / |
-          / /  
-        \/ /
-        /\/
-        \/\
-
-             _
-            / |     
-           / /  
-        \_/ /
-        / \/
-        \/ \
-
-*/
 
 /* 
       )
