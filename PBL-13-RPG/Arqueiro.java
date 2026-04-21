@@ -47,7 +47,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
         switch (acaoEscolhida) {
             case 1: // Ataque
                 // --- FRAME 1 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                            ║");
@@ -60,7 +60,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                            ║");
@@ -73,7 +73,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 3 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                            ║");
@@ -86,7 +86,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 4 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                            ║");
@@ -99,7 +99,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 5 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                          . ║");
@@ -112,7 +112,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                        .   ║");
@@ -125,7 +125,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(60); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 7 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " usa FLECHA MÁGICA!");
                 System.out.println("║                                                            ║");
@@ -140,7 +140,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                 break;
             case 2: // Habilidade Especial
                   // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -156,7 +156,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -172,7 +172,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 3 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -188,7 +188,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 4 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -204,7 +204,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 5 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -220,7 +220,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -236,7 +236,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -252,7 +252,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 7 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -268,7 +268,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 8 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -284,7 +284,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 9 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -300,7 +300,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 10 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -316,7 +316,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 11 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -332,7 +332,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 12 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -348,7 +348,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 13 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -364,7 +364,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 14 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -380,7 +380,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 15 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -396,7 +396,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 16 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -412,7 +412,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 17 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -428,7 +428,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 18 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -444,7 +444,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 19 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -460,7 +460,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 20 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -476,7 +476,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 21 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -492,7 +492,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 22 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -508,7 +508,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 23 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -524,7 +524,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 24 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -540,7 +540,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 25 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -556,7 +556,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 26 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -572,7 +572,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 27 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -588,7 +588,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 28 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -604,7 +604,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 29 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -620,7 +620,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 30 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -636,7 +636,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 31 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -652,7 +652,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 32 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -668,7 +668,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 33 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -684,7 +684,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 34 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -700,7 +700,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 35 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -716,7 +716,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 36 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -732,7 +732,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 37 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -748,7 +748,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 38 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -764,7 +764,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 39 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -780,7 +780,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 40 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -796,7 +796,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 41 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -812,7 +812,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 42 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -828,7 +828,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 43 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -844,7 +844,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 44 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -860,7 +860,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 45 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -876,7 +876,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 46 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -892,7 +892,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 47 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -908,7 +908,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 48 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -924,7 +924,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 49 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -940,7 +940,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 50 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -956,7 +956,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 51 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -972,7 +972,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
                 
                 // --- FRAME 52 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -988,7 +988,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 53 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1004,7 +1004,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 54 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1020,7 +1020,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 55 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1036,7 +1036,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 56 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1052,7 +1052,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 57 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1068,7 +1068,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 58 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1084,7 +1084,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 59 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1100,7 +1100,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
                 
                 // --- FRAME 60 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1116,7 +1116,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 61 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1132,7 +1132,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 62 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1148,7 +1148,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 63 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1164,7 +1164,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 64 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1180,7 +1180,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 65 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1196,7 +1196,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 66 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1212,7 +1212,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 67 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1228,7 +1228,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 68 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1244,7 +1244,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 69 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1260,7 +1260,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 70 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1276,7 +1276,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 71 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1292,7 +1292,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                try { Thread.sleep(10); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 72 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Dispara uma sequência de flechas!");
                 System.out.println("║                                                            ║");
@@ -1310,7 +1310,7 @@ public class Arqueiro extends PersonagemBase implements HabilidadeEspecial, Recu
                 break;
             
             case 3: // Recuperar
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " Usa a energia dos espiritos e se RECUPERA!");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");

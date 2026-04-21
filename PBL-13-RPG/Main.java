@@ -4,12 +4,28 @@ import java.util.Scanner;
 public class Main {
 
     // Método para limpar o console usando códigos ANSI
+    // 1. O Limpar Tela "Pesado e Bonito" (Para Menus, Loja e Fogueira)
     public static void limparTela() {
-        // \033[H  -> Move o cursor para o topo
-        // \033[2J -> Limpa a tela visível
-        // \033[3J -> Limpa o histórico de rolagem (scrollback)
-        System.out.print("\033[H\033[2J\033[3J");
-        System.out.flush();// Garante que a limpeza seja aplicada imediatamente
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                System.out.print("\033[H\033[2J\033[3J");
+                System.out.flush();
+            }
+        } catch (Exception e) {
+            limparTelaAnimacao(); // Se o cls falhar, usa o método leve como plano B
+        }
+    }
+
+    // 2. O Limpar Tela "Turbo" (EXCLUSIVO para frames de Animação e Combate)
+    public static void limparTelaAnimacao() {
+        StringBuilder quebrasDeLinha = new StringBuilder();
+        for (int i = 0; i < 50; i++) {
+            quebrasDeLinha.append("\n");
+        }
+        System.out.print(quebrasDeLinha.toString());
+        System.out.flush();
     }
 
     public static void main(String[] args) {

@@ -43,7 +43,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 if (numeroTurno % 2 == 0) {
 
                 // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                           \\  |  /                          ║");
@@ -60,7 +60,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 2 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                         \\    |    /                        ║");
@@ -79,7 +79,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 3 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                       \\      |      /                      ║");
@@ -97,7 +97,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 4 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                     \\        |        /                    ║");
@@ -115,7 +115,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 5 ---
-                Main.limparTela();                                                                                                             
+                Main.limparTelaAnimacao();                                                                                                             
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                    |         |         |                   ║");
@@ -132,7 +132,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                     /        |        \\                    ║");
@@ -149,7 +149,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 7 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                      /       |       \\                     ║");
@@ -166,7 +166,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 8 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                       /      |      \\                      ║");
@@ -182,7 +182,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
                 
                 // --- FRAME 9 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                        /     |     \\                       ║");
@@ -199,7 +199,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 10 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                         /    |    \\                        ║");
@@ -216,7 +216,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 11 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                          /   |   \\                         ║");
@@ -233,7 +233,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 12 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                    ||_____/  |  \\_____||                   ║");
@@ -250,7 +250,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 13 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                     ._____l_______l_____.                  ║");
@@ -267,7 +267,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 14 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                          ___________                       ║");
@@ -284,7 +284,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 
 
                 // --- FRAME 15 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -301,7 +301,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                  
 
                 // --- FRAME 16 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -318,7 +318,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
             
 
                 // --- FRAME 17 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " ataca pesadamente com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -337,7 +337,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 } else {
 
                 // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                 _                                          ║");
@@ -353,7 +353,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                   _                                        ║");
@@ -369,7 +369,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 3 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                     _                                      ║");
@@ -385,7 +385,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 4 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -401,7 +401,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 5 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -417,7 +417,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -433,7 +433,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 7 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -449,7 +449,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 8 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -465,7 +465,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 9 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -481,7 +481,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(35); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 10 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " prepara um CORTE DEVASTADOR!");
                 System.out.println("║                                                            ║");
@@ -504,7 +504,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
 
                 ReprodutorDeAudio.tocarSom("PBL-13-RPG/Sons/EspadaHabilidadeEspecial.wav");
                 // --- FRAME 1 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -516,7 +516,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -528,7 +528,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 3 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -540,7 +540,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 4 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -551,7 +551,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
 
                 // --- FRAME 5 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -563,7 +563,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 6 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -575,7 +575,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 7 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -587,7 +587,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 8 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                      .     ║");
@@ -599,7 +599,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 9 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                          °.║");
@@ -611,7 +611,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {}
 
                 // --- FRAME 10 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " avança com a ESPADA!");
                 System.out.println("║                                                            ║");
@@ -625,7 +625,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 break;
             case 3: // Recuperar
                 // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -642,7 +642,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -659,7 +659,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 3 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -676,7 +676,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 4 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -693,7 +693,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 5 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -710,7 +710,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -727,7 +727,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 7 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -744,7 +744,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 8 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -761,7 +761,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 9 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");
@@ -778,7 +778,7 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
                 try { Thread.sleep(24); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 10 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " levanta o escudo e se RECUPERA!");
                 System.out.println("║                                                            ║");

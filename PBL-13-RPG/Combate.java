@@ -52,9 +52,9 @@ public class Combate {
                         acaoValida = true;
                     } else if (acao == 2) {
                         if (heroi.getContadorAtaques() < 2) {
-                            System.out.println("\n❌ A Habilidade ainda não está carregada com ataques!");
+                            System.out.println("\n A Habilidade ainda não está carregada com ataques!");
                         } else if (valorRecurso < 10) {
-                            System.out.println("\n❌ Você não tem " + nomeRecurso + " suficiente para usar isso!");
+                            System.out.println("\n Você não tem " + nomeRecurso + " suficiente para usar isso!");
                         } else {
                             acaoValida = true; // Tudo certo, tem ataques E energia. Permite o uso!
                         }
@@ -67,7 +67,7 @@ public class Combate {
             }
 
             // 2. Fase de Animação do Herói
-            Main.limparTela();
+            Main.limparTelaAnimacao();
 
             // Passamos a ação e o turno atual para a classe saber qual arte desenhar
             heroi.desenharAcao(acao, contadorTurno);

@@ -43,7 +43,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
             case 1: // Ataque
                 if (numeroTurno % 2 == 0) {
                 // --- FRAME 1 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                            ║");
@@ -57,7 +57,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 2 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                            ║");
@@ -71,7 +71,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 3 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                            ║");
@@ -85,7 +85,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 4 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                            ║");
@@ -99,7 +99,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 5 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                          . ║");
@@ -113,7 +113,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 6 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                            ║");
@@ -127,7 +127,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 7 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                           .║");
@@ -142,7 +142,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {}
 
                 // --- FRAME 8 ---
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " conjura BOLA DE FOGO!");
                 System.out.println("║                                                           .║");
@@ -162,7 +162,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
 
             case 2: // Habilidade Especial
                 // --- FRAME 1 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -178,7 +178,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 2 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -194,7 +194,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 3 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -210,7 +210,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 4 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -226,7 +226,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 5 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -242,7 +242,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 6 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -258,7 +258,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
                 try { Thread.sleep(100); } catch (InterruptedException e) {} // 100 milissegundos
 
                 // --- FRAME 7 ---
-                Main.limparTela();                                                                                                              
+                Main.limparTelaAnimacao();                                                                                                              
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " faz uma Explosão!");
                 System.out.println("║                                                            ║");
@@ -277,7 +277,7 @@ public class Mago extends PersonagemBase implements HabilidadeEspecial, Recupera
 
                 
             case 3: // Recuperar
-                Main.limparTela();
+                Main.limparTelaAnimacao();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");
                 System.out.printf("║ %-58s ║\n", getNome() + " canaliza energia e se RECUPERA!");
                 System.out.println("╚════════════════════════════════════════════════════════════╝");
