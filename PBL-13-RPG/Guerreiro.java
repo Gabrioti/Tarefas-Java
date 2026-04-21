@@ -501,6 +501,8 @@ public class Guerreiro extends PersonagemBase implements HabilidadeEspecial, Rec
 
                 break;
             case 2: // Habilidade Especial
+
+                ReprodutorDeAudio.tocarSom("PBL-13-RPG/Sons/EspadaHabilidadeEspecial.wav");
                 // --- FRAME 1 ---
                 Main.limparTela();
                 System.out.println("╔════════════════════════════════════════════════════════════╗");

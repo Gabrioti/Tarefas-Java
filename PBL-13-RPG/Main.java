@@ -15,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        ReprodutorDeAudio.tocarMusicaEmLoop("PBL-13-RPG/Sons/Ambiente.wav");
         loopDoJogo:
         while (true) {
         PersonagemBase heroi = null;
@@ -30,7 +31,8 @@ public class Main {
         filaInimigos.add(new OrcFurioso());
         filaInimigos.add(new ReiDemonio());
 
-        limparTela();
+
+        //limparTela();
         System.out.println("╔════════════════════════════════════════════════════════════╗");
         System.out.println("║                      BEM-VINDO AO RPG                      ║");
         System.out.println("╚════════════════════════════════════════════════════════════╝");
@@ -128,7 +130,7 @@ public class Main {
 
                 if (heroi.getNivel() > nivelAntes) {
                     limparTela();
-                    System.out.println("✨ LEVEL UP! Você ganhou novos pontos de atributo!");
+                    System.out.println(" LEVEL UP! Você ganhou novos pontos de atributo!");
                     distribuirPontos(heroi, scanner);
                     heroi.restaurarStaminaTotal(); // Restaura a Stamina/Mana ao subir de nível
                 }

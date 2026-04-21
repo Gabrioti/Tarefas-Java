@@ -30,12 +30,19 @@ public class Combate {
                     System.out.println("\nO que você fará?");
                     System.out.println("1 - Atacar");
                     
-                    // Mostra se a habilidade está pronta ou quantos ataques faltam
-                    if (heroi.getContadorAtaques() >= 2) {
-                        System.out.println("2 - Habilidade Especial [PRONTA!]");
-                    } else {
+                    // Descobre qual é o recurso exato que este herói usa
+                    String nomeRecurso = (heroi instanceof Mago) ? "Mana" : "Stamina";
+                    int valorRecurso = (heroi instanceof Mago) ? heroi.getMana() : heroi.getStamina();
+
+                    // Mostra o status real da habilidade no menu
+                    if (heroi.getContadorAtaques() < 2) {
                         System.out.println("2 - Habilidade Especial [Carregando: " + (2 - heroi.getContadorAtaques()) + " ataques restantes]");
+                    } else if (valorRecurso < 10) {
+                        System.out.println("2 - Habilidade Especial [Sem " + nomeRecurso + " suficiente!]");
+                    } else {
+                        System.out.println("2 - Habilidade Especial [PRONTA!]");
                     }
+                    
                     System.out.println("3 - Recuperar");
                     System.out.print("Sua escolha: ");
                     acao = Integer.parseInt(scanner.nextLine());
@@ -44,10 +51,12 @@ public class Combate {
                     if (acao == 1 || acao == 3) {
                         acaoValida = true;
                     } else if (acao == 2) {
-                        if ((heroi.getContadorAtaques() >= 2 && heroi.getMana() >= 10) || (heroi.getContadorAtaques() >= 2 && heroi.getStamina() >= 10)) {
-                            acaoValida = true; // Permite o uso!
+                        if (heroi.getContadorAtaques() < 2) {
+                            System.out.println("\n❌ A Habilidade ainda não está carregada com ataques!");
+                        } else if (valorRecurso < 10) {
+                            System.out.println("\n❌ Você não tem " + nomeRecurso + " suficiente para usar isso!");
                         } else {
-                            System.out.println("\n A Habilidade ainda não está carregada!");
+                            acaoValida = true; // Tudo certo, tem ataques E energia. Permite o uso!
                         }
                     } else {
                         System.out.println("Ação inválida. Escolha 1, 2 ou 3.");
